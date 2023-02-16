@@ -1,15 +1,55 @@
 package Models;
 
 public class Event {
+    /**
+     * generated ID that has been assigned to Event
+     */
     private String eventID;
+    /**
+     * the user whose 'relatives' this event has 'happened' to
+     */
     private String associatedUsername;
+    /**
+     * the Person this event has 'happened' to
+     */
     private String personID;
+    /**
+     * latitudinal location of said event
+     */
     private float latitude;
+    /**
+     * longitudinal location of said event
+     */
     private float longitude;
+    /**
+     * country location of said event
+     */
     private String country;
+    /**
+     * city location of said event
+     */
     private String city;
+    /**
+     * Type of event
+     */
     private String eventType;
+    /**
+     * year said event happened
+     */
     private int year;
+
+    /**
+     * Constructor
+     * @param eventID generated ID that has been assigned to Event
+     * @param associatedUsername the user whose 'relatives' this event has 'happened' to
+     * @param personID the Person this event has 'happened' to
+     * @param latitude latitudinal location of said event
+     * @param longitude longitudinal location of said event
+     * @param country country location of said event
+     * @param city city location of said event
+     * @param eventType Type of event
+     * @param year year said event happened
+     */
 
     public Event(String eventID, String associatedUsername, String personID, float latitude, float longitude, String country, String city, String eventType, int year) {
         this.eventID = eventID;
@@ -22,6 +62,29 @@ public class Event {
         this.eventType = eventType;
         this.year = year;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public String getEventID() {
         return eventID;
