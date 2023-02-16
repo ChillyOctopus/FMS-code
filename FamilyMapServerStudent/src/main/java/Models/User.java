@@ -1,14 +1,46 @@
 package Models;
 
 public class User {
+
+    /**
+     * User's name
+     */
     private String username;
+    /**
+     * User's password
+     */
     private String password;
+    /**
+     * User's email
+     */
     private String email;
+    /**
+     * User's first name
+     */
     private String firstName;
+    /**
+     * User's last name
+     */
     private String lastName;
+    /**
+     * User's gender
+     */
     private String gender;
+    /**
+     * generated ID that has been assigned to User
+     */
     private String personID;
 
+    /**
+     * Constructor
+     * @param username Users name
+     * @param password Users password
+     * @param email Users email
+     * @param firstName Users first name
+     * @param lastName Users last name
+     * @param gender Users gender
+     * @param personID generated ID that has been assigned to User
+     */
     public User(String username, String password, String email, String firstName, String lastName, String gender, String personID) {
         this.username = username;
         this.password = password;
@@ -18,6 +50,16 @@ public class User {
         this.gender = gender;
         this.personID = personID;
     }
+
+
+
+
+
+
+
+
+
+
 
     public String getUsername() {
         return username;
