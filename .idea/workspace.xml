@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Further testing">
+    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Finished the javadoc for DAO classes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/AuthtokenDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/AuthtokenDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/EventDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/EventDAO.java" afterDir="false" />
@@ -186,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678227615205</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Finished the javadoc for DAO classes.">
+      <created>1678228719005</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1678228719005</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -233,6 +240,7 @@
     <MESSAGE value="Changing git remote" />
     <MESSAGE value="adding test file." />
     <MESSAGE value="Further testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Further testing" />
+    <MESSAGE value="Finished the javadoc for DAO classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished the javadoc for DAO classes." />
   </component>
 </project>
