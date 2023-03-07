@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * DAO for user, building new users from database.
  */
-public class UserDAO extends abstractDAO {
+public class UserDAO {
 
     /**
      * Returns a single user
@@ -18,6 +18,7 @@ public class UserDAO extends abstractDAO {
      */
     public User extractUser(String ID){
         UserDAO dao = new UserDAO();
+        /*
         ResultSet rs = dao.getRecord("user", "personID", ID);
         if(rs!=null){
             try{
@@ -34,8 +35,8 @@ public class UserDAO extends abstractDAO {
                 System.err.println("Something went wrong returning user..." + ex.getMessage());
             }
         }
+         */
         return null;
-
     }
 
     /**

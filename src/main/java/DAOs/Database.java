@@ -8,13 +8,18 @@ import java.sql.Statement;
 public class Database {
     private Connection conn;
 
+    /**
+     * Opening the connection using a "FINAL" url.
+     * @return a connection object.
+     * @throws DataAccessException
+     */
     // Whenever we want to make a change to our database we will have to open a connection and use
     // Statements created by that connection to initiate transactions
     public Connection openConnection() throws DataAccessException {
         try {
             // The Structure for this Connection is driver:language:path
             // The path assumes you start in the root of your project unless given a full file path
-            final String CONNECTION_URL = "jdbc:sqlite:familymap.sqlite";
+            final String CONNECTION_URL = "jdbc:sqlite:/home/adam/jacob/jacob_java/FMS.db";
 
             // Open a database connection to the file given in the path
             conn = DriverManager.getConnection(CONNECTION_URL);
@@ -37,6 +42,10 @@ public class Database {
         }
     }
 
+    /**
+     * Closing the connection when we are done with it.
+     * @param commit the boolean to see if we want to save changes or not.
+     */
     // When we are done manipulating the database it is important to close the connection. This will
     // end the transaction and allow us to either commit our changes to the database (if true is passed in)
     // or rollback any changes that were made before we encountered a potential error (if false is passed in).

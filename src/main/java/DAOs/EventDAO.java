@@ -1,16 +1,23 @@
 package DAOs;
 
+import java.sql.*;
 import Models.Event;
 
-import java.sql.*;
-
 public class EventDAO {
+    /**
+     * The connection we need to access the database.
+     */
     private final Connection conn;
 
     public EventDAO(Connection conn) {
         this.conn = conn;
     }
 
+    /**
+     * Inserting an object event into our database.
+     * @param event The event object we are inserting in the database.
+     * @throws DataAccessException
+     */
     public void insert(Event event) throws DataAccessException {
         //We can structure our string to be similar to a sql command, but if we insert question
         //marks we can change them later with help from the statement
@@ -37,6 +44,12 @@ public class EventDAO {
         }
     }
 
+    /**
+     * Finding an Event inside our database.
+     * @param eventID The ID of the event we are trying to find.
+     * @return An event object.
+     * @throws DataAccessException
+     */
     public Event find(String eventID) throws DataAccessException {
         Event event;
         ResultSet rs;
@@ -60,6 +73,10 @@ public class EventDAO {
 
     }
 
+    /**
+     * Clearing the Event table in our database.
+     * @throws DataAccessException
+     */
     public void clear() throws DataAccessException {
         String sql = "DELETE FROM Events";
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
