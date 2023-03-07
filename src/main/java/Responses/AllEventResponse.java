@@ -1,9 +1,9 @@
-package Req_Res;
+package Responses;
 
 import Models.Event;
 import Models.Person;
 
-public class ResponseBody {
+public class AllEventResponse {
     /**
      * the authtoken to return
      */
