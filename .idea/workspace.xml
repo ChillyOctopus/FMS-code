@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Modifying classes, added table statements.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="adding test file." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,7 +131,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678212963388</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Changing git remote">
+      <created>1678213586542</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678213586542</updated>
+    </task>
+    <task id="LOCAL-00006" summary="adding test file.">
+      <created>1678213811176</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678213811176</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -177,6 +189,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Base setup, classes and directories" />
     <MESSAGE value="Modifying classes, added table statements." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modifying classes, added table statements." />
+    <MESSAGE value="Changing git remote" />
+    <MESSAGE value="adding test file." />
+    <option name="LAST_COMMIT_MESSAGE" value="adding test file." />
   </component>
 </project>
