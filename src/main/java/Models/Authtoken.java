@@ -12,25 +12,32 @@ public class Authtoken {
      */
     private String username;
     /**
+     * the time token was created
+     */
+    private String timeStamp;
+    /**
      * used for authtoken generation
      */
-    private static String tokenChars = "01234567890~!@#$%^&><AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+    private static final String TOKENCHARS = "01234567890`~!@#$%^&><AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
 
     /**
      * Constructor
      * @param authtoken the actual authtoken
      * @param username associated username
+     * @param timeStamp the timestamp it was taken.
      */
-    public Authtoken(String authtoken, String username) {
+    public Authtoken(String authtoken, String username, String timeStamp) {
         this.authtoken = authtoken;
         this.username = username;
+        this.timeStamp = timeStamp;
     }
 
+
     /**
-     * Generates a random string
+     * Generates a random string for the authtoken
      * @return returns randomized string
      */
-    public static String generateAuthtoken(){
+    public String generateAuthtoken(){
         Random random = new Random();
         StringBuilder result = new StringBuilder();
 
@@ -38,11 +45,13 @@ public class Authtoken {
         count += 8;
 
         for(int i = 0; i < count; i++){
-            result.append(tokenChars.charAt(random.nextInt(tokenChars.length())));
+            result.append(TOKENCHARS.charAt(random.nextInt(TOKENCHARS.length())));
         }
 
-        System.out.print(result.toString());
-        return result.toString();
+        String token = result.toString();
+        System.out.print(token);
+        this.authtoken = token;
+        return token;
     }
 
 
@@ -61,5 +70,13 @@ public class Authtoken {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getTimeStamp() {
+        return timeStamp;
+    }
+
+    public void setTimeStamp(String timeStamp) {
+        this.timeStamp = timeStamp;
     }
 }

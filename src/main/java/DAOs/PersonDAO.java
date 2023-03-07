@@ -23,7 +23,7 @@ public class PersonDAO {
      * @return a single person whose ID matches the parameter
      * @throws DataAccessException
      */
-    public Person extractPerson(String ID) throws DataAccessException {
+    public Person find(String ID) throws DataAccessException {
         Person p = null;
         return p;
     }
@@ -34,7 +34,7 @@ public class PersonDAO {
      * @return A list of people in the database
      * @throws DataAccessException
      */
-    public List<Person> extractAllPersons(String assocUserID) throws DataAccessException{
+    public List<Person> findAll(String assocUserID) throws DataAccessException{
         List<Person> myList = null;
         return myList;
     }

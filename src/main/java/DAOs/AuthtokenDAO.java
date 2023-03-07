@@ -23,7 +23,7 @@ public class AuthtokenDAO{
      * @param token The token we are checking is in database.
      * @return true if database has the token, false if not.
      */
-    public boolean validAuthtoken(String token){
+    public boolean verify(String token){
         return true;
     }
 
@@ -32,7 +32,7 @@ public class AuthtokenDAO{
      * @param username the username we are searching for an authtoken for
      * @return the list of authtokens (likely just one) that matches the username
      */
-    public List<Authtoken> extractAuthtoken(String username){
+    public List<Authtoken> find(String username){
         List<Authtoken> myList = null;
         return myList;
     }
@@ -41,7 +41,7 @@ public class AuthtokenDAO{
      * get all the Authtokens in the database.
      * @return A list of the authtokens we have.
      */
-    public List<Authtoken> extractAllAuthtokens(){
+    public List<Authtoken> findAll(){
         List<Authtoken> myTotalList = null;
         return myTotalList;
     }

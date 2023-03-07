@@ -25,7 +25,7 @@ public class UserDAO{
      * @param ID the ID we are searching for.
      * @return the User object from the database.
      */
-    public User extractUser(String ID){
+    public User find(String ID){
         UserDAO dao = new UserDAO();
         /*
         ResultSet rs = dao.getRecord("user", "personID", ID);
@@ -52,7 +52,7 @@ public class UserDAO{
      * Returns all the users in the Database.
      * @return A list of User objects.
      */
-    public List<User> extractAllUsers(){
+    public List<User> findAll(){
         List<User> myList = null;
         return myList;
 

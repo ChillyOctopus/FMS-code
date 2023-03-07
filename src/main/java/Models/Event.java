@@ -40,6 +40,18 @@ public class Event {
      */
     private Integer year;
 
+    /**
+     * Constructor
+     * @param eventID the eventID
+     * @param username the username associated to the person associated to this event
+     * @param personID the associated personID
+     * @param latitude the latitude
+     * @param longitude the longitude
+     * @param country the country
+     * @param city the city
+     * @param eventType the type
+     * @param year the year
+     */
     public Event(String eventID, String username, String personID, Float latitude, Float longitude,
                  String country, String city, String eventType, Integer year) {
         this.eventID = eventID;

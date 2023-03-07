@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Finished the javadoc for DAO classes.">
+    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Removed &quot;DB&quot; classes (What were they doin anyway?)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/AuthtokenDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/AuthtokenDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/EventDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/EventDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/PersonDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Authtoken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Authtoken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Event.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678228719005</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Removed &quot;DB&quot; classes (What were they doin anyway?)">
+      <created>1678228784512</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1678228784512</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -241,6 +249,7 @@
     <MESSAGE value="adding test file." />
     <MESSAGE value="Further testing" />
     <MESSAGE value="Finished the javadoc for DAO classes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished the javadoc for DAO classes." />
+    <MESSAGE value="Removed &quot;DB&quot; classes (What were they doin anyway?)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed &quot;DB&quot; classes (What were they doin anyway?)" />
   </component>
 </project>
