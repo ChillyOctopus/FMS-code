@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="adding test file." />
+    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Further testing">
+      <change afterPath="$PROJECT_DIR$/src/main/java/DAOs/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/EventDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/EventDAO.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -152,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678213937673</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Further testing">
+      <created>1678214476949</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1678214476949</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,6 +209,7 @@
     <MESSAGE value="Modifying classes, added table statements." />
     <MESSAGE value="Changing git remote" />
     <MESSAGE value="adding test file." />
-    <option name="LAST_COMMIT_MESSAGE" value="adding test file." />
+    <MESSAGE value="Further testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Further testing" />
   </component>
 </project>
