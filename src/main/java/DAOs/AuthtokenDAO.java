@@ -4,8 +4,19 @@ import Models.Authtoken;
 
 import java.io.StringBufferInputStream;
 import java.util.List;
-
+/**
+ * In-between for Authtoken models and database.
+ */
 public class AuthtokenDAO{
+
+    /**
+     * Inserting a token object into the database.
+     * @param token the token we are inserting.
+     * @throws DataAccessException
+     */
+    public void insert(Authtoken token) throws DataAccessException{
+        return;
+    }
 
     /**
      * Checks to see if we have the token in the database.
@@ -17,9 +28,9 @@ public class AuthtokenDAO{
     }
 
     /**
-     * Returns an authtoken(s) which match the username we are looking for.
+     * Returns a list of authtokens (likely just one) which match the username we are looking for.
      * @param username the username we are searching for an authtoken for
-     * @return the List of authtokens (likely just one) that matches the username
+     * @return the list of authtokens (likely just one) that matches the username
      */
     public List<Authtoken> extractAuthtoken(String username){
         List<Authtoken> myList = null;
@@ -33,5 +44,13 @@ public class AuthtokenDAO{
     public List<Authtoken> extractAllAuthtokens(){
         List<Authtoken> myTotalList = null;
         return myTotalList;
+    }
+
+    /**
+     * Clearing all the Authtoken data from database.
+     * @throws DataAccessException
+     */
+    public void clear() throws DataAccessException{
+        return;
     }
 }

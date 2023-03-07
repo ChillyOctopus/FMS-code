@@ -7,14 +7,23 @@ import java.util.List;
 
 
 /**
- * DAO for user, building new users from database.
+ * In-between for User models and database.
  */
-public class UserDAO {
+public class UserDAO{
 
     /**
-     * Returns a single user
-     * @param ID given their ID
-     * @return the User object from the database
+     * Inserting a User object into the database.
+     * @param user the object we are inserting.
+     * @throws DataAccessException
+     */
+    public void insert(User user) throws DataAccessException {
+        return;
+    }
+
+    /**
+     * Returns a single user based on ID.
+     * @param ID the ID we are searching for.
+     * @return the User object from the database.
      */
     public User extractUser(String ID){
         UserDAO dao = new UserDAO();
@@ -40,8 +49,8 @@ public class UserDAO {
     }
 
     /**
-     * Returns all the users in the Database
-     * @return A list of User objects
+     * Returns all the users in the Database.
+     * @return A list of User objects.
      */
     public List<User> extractAllUsers(){
         List<User> myList = null;

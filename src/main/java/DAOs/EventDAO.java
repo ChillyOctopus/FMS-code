@@ -2,7 +2,9 @@ package DAOs;
 
 import java.sql.*;
 import Models.Event;
-
+/**
+ * In-between for Event models and database.
+ */
 public class EventDAO {
     /**
      * The connection we need to access the database.
@@ -14,7 +16,7 @@ public class EventDAO {
     }
 
     /**
-     * Inserting an object event into our database.
+     * Inserting an Event object into our database.
      * @param event The event object we are inserting in the database.
      * @throws DataAccessException
      */
@@ -74,7 +76,7 @@ public class EventDAO {
     }
 
     /**
-     * Clearing the Event table in our database.
+     * Clearing all the Event data from our database.
      * @throws DataAccessException
      */
     public void clear() throws DataAccessException {
