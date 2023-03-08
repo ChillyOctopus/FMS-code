@@ -11,7 +11,6 @@ public class BaseDAO {
      */
     public BaseDAO() {
         DB = new Database();
-
         try {
             DB.openConnection();
         } catch(DataAccessException ex){

@@ -15,6 +15,7 @@ public class UserDAO extends BaseDAO{
 
     public final String insertSQL = "INSERT INTO User VALUES ? ? ? ? ? ? ?";
     public final String findAllSQL = "SELECT * FROM User";
+    public final String deleteSQL = "DELETE FROM User WHERE username = ?";
     public final String clearSQL = "DELETE FROM User";
 
     /**
@@ -61,7 +62,7 @@ public class UserDAO extends BaseDAO{
         ResultSet rs = getRecord("user", "personID", ID);
         try{
             if(rs.first()){
-            return new User(
+                return new User(
                     rs.getString("username"),
                     rs.getString("password"),
                     rs.getString("email"),
@@ -79,6 +80,25 @@ public class UserDAO extends BaseDAO{
         }
 
         return null;
+    }
+
+    /**
+     * Deletes a user given their username.
+     * @param username the username we are deleting from database.
+     */
+    public void delete(String username){
+        try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(deleteSQL)){
+            prepStmt.setString(1,username);
+            prepStmt.executeQuery();
+            DB.closeConnection(true);
+
+        } catch (DataAccessException ex){
+            System.out.println(ex.getMessage());
+            System.out.println("Couldn't open connection\n");
+        } catch (SQLException ex){
+            System.out.println(ex.getMessage());
+            System.out.println("Couldn't prepare statement or execute delete.");
+        }
     }
 
     /**
@@ -121,7 +141,7 @@ public class UserDAO extends BaseDAO{
     }
 
     /**
-     * Clears all data using "delete from [table-name]"
+     * Clears all data from User table.
      */
     public void clear(){
         try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(clearSQL)){
