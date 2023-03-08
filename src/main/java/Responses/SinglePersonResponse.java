@@ -1,25 +1,17 @@
 package Responses;
 
-import Models.Event;
-import Models.Person;
-
+/**
+ * The response body for a single Person.
+ */
 public class SinglePersonResponse {
-    /**
-     * the authtoken to return
-     */
-    public String authtoken;
-    /**
-     * the username to return
-     */
-    public String username;
-    /**
-     * the personID to return
-     */
-    public String personID;
     /**
      * the associated Username to return
      */
     public String associatedUsername;
+    /**
+     * the personID to return
+     */
+    public String personID;
     /**
      * the first name to return
      */
@@ -45,47 +37,29 @@ public class SinglePersonResponse {
      */
     public String spouseID;
     /**
-     * array of Person objects to return
-     */
-    public Person[] data;
-    /**
-     * the event ID to return
-     */
-    public String eventID;
-    /**
-     * the latitude to return
-     */
-    public float latitude;
-    /**
-     * the longitude to return
-     */
-    public float longitude;
-    /**
-     * the country to return
-     */
-    public String country;
-    /**
-     * the city to return
-     */
-    public String city;
-    /**
-     * the event type to return
-     */
-    public String eventType;
-    /**
-     * the year to return
-     */
-    public int year;
-    /**
-     * array of Event objects to return
-     */
-    public Event[] Eventdata;
-    /**
-     * the message we will send
-     */
-    public String message;
-    /**
      * the boolean state of whether our service worked or not
      */
-    public boolean success;
+    public boolean success = true;
+
+    /**
+     * Constructor
+     * @param associatedUsername the username who is a descendent of person
+     * @param personID the persons id
+     * @param firstName their first name
+     * @param lastName their last name
+     * @param gender their gender
+     * @param fatherID their fathers ID (optional)
+     * @param motherID their mothers ID (optional)
+     * @param spouseID their spouses ID (optional)
+     */
+    public SinglePersonResponse(String associatedUsername, String personID, String firstName, String lastName, String gender, String fatherID, String motherID, String spouseID) {
+        this.associatedUsername = associatedUsername;
+        this.personID = personID;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.fatherID = fatherID;
+        this.motherID = motherID;
+        this.spouseID = spouseID;
+    }
 }

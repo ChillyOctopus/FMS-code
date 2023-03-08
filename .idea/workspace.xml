@@ -4,27 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Updated javadoc for DAOs and Model classes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Requests/ClearRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Requests/FillRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Requests/LoadRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Requests/LoginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Requests/SingleEventRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Requests/SinglePersonRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Responses/AllEventResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Responses/AllPersonResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Responses/ClearResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Responses/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Responses/FillResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Responses/LoadResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Responses/LoginResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Responses/SingleEventResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Responses/SinglePersonResponse.java" afterDir="false" />
+    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Did all request objects.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Req_Res/RequestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Requests/RegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Req_Res/ResponseBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/RegisterResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Clear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Clear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/AllEventResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/AllEventResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/AllPersonResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/AllPersonResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/ClearResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/ClearResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/FillResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/FillResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/LoadResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/LoadResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/LoginResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/RegisterResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/RegisterResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/SingleEventResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/SingleEventResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/SinglePersonResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/SinglePersonResponse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678229905890</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Did all request objects.">
+      <created>1678233413985</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1678233413985</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -277,6 +274,7 @@
     <MESSAGE value="Finished the javadoc for DAO classes." />
     <MESSAGE value="Removed &quot;DB&quot; classes (What were they doin anyway?)" />
     <MESSAGE value="Updated javadoc for DAOs and Model classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated javadoc for DAOs and Model classes" />
+    <MESSAGE value="Did all request objects." />
+    <option name="LAST_COMMIT_MESSAGE" value="Did all request objects." />
   </component>
 </project>

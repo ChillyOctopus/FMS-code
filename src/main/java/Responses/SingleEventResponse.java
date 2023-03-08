@@ -1,57 +1,17 @@
 package Responses;
 
-import Models.Event;
-import Models.Person;
-
+/**
+ * The response body for a single Event.
+ */
 public class SingleEventResponse {
-    /**
-     * the authtoken to return
-     */
-    public String authtoken;
-    /**
-     * the username to return
-     */
-    public String username;
-    /**
-     * the personID to return
-     */
-    public String personID;
     /**
      * the associated Username to return
      */
     public String associatedUsername;
     /**
-     * the first name to return
+     * the personID to return
      */
-    public String firstName;
-    /**
-     * the last name to return
-     */
-    public String lastName;
-    /**
-     * the gender to return
-     */
-    public String gender;
-    /**
-     * the father ID to return
-     */
-    public String fatherID;
-    /**
-     * the mother ID to return
-     */
-    public String motherID;
-    /**
-     * the spouse ID to return
-     */
-    public String spouseID;
-    /**
-     * array of Person objects to return
-     */
-    public Person[] data;
-    /**
-     * the event ID to return
-     */
-    public String eventID;
+    public String personID;
     /**
      * the latitude to return
      */
@@ -77,15 +37,29 @@ public class SingleEventResponse {
      */
     public int year;
     /**
-     * array of Event objects to return
-     */
-    public Event[] Eventdata;
-    /**
-     * the message we will send
-     */
-    public String message;
-    /**
      * the boolean state of whether our service worked or not
      */
-    public boolean success;
+    public boolean success = true;
+
+    /**
+     * Constructor
+     * @param associatedUsername the username this event belongs to
+     * @param personID the person this event happened to
+     * @param latitude the latitude
+     * @param longitude the longitude
+     * @param country the country
+     * @param city the city
+     * @param eventType the type of event
+     * @param year the year it happened
+     */
+    public SingleEventResponse(String associatedUsername, String personID, float latitude, float longitude, String country, String city, String eventType, int year) {
+        this.associatedUsername = associatedUsername;
+        this.personID = personID;
+        this.latitude = latitude;
+        this.longitude = longitude;
+        this.country = country;
+        this.city = city;
+        this.eventType = eventType;
+        this.year = year;
+    }
 }
