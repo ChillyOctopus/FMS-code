@@ -3,6 +3,9 @@ package Services;
 import Requests.GetAllRequest;
 import Responses.AllEventResponse;
 
+/**
+ * Implements getting all events
+ */
 public class GetAllEvents {
     /**
      * classes copy of request
@@ -18,7 +21,7 @@ public class GetAllEvents {
     }
 
     /**
-     * implements finding all events
+     * finds all events
      * @return the All.Eve.Resp. object
      */
     public AllEventResponse findAll(){

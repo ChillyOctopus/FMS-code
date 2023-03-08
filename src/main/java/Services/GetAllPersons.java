@@ -3,6 +3,9 @@ package Services;
 import Requests.GetAllRequest;
 import Responses.AllPersonResponse;
 
+/**
+ * Implements getting all persons
+ */
 public class GetAllPersons {
     /**
      * classes copy of request
@@ -18,7 +21,7 @@ public class GetAllPersons {
     }
 
     /**
-     * implements finding all persons
+     * finds all persons
      * @return the All.Pers.Resp. object
      */
     public AllPersonResponse findAll(){
