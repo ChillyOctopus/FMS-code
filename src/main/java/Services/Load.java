@@ -1,11 +1,37 @@
 package Services;
 
+import Requests.LoadRequest;
+import Responses.LoadResponse;
+import Responses.ErrorResponse;
+
+/**
+ * Implements Load
+ */
 public class Load {
     /**
-     * Updates database with request body content (delete old, insert new)
-     * @param requestBody the new content we are inserting
+     * classes copy of request
      */
-    public void update(String requestBody){
+    private LoadRequest request;
 
+    /**
+     * Constructor
+     * @param request the Load.Req. object
+     */
+    public Load(LoadRequest request) {
+        this.request = request;
     }
+
+    /**
+     * loads database
+     * @return a Load.Resp. object
+     */
+    public LoadResponse load(){
+       LoadResponse response = null;
+       return response;
+    }
+
+    /*
+    1. Clears all data from database (use clear)
+    2. Load user, person, and events from req. body to database,
+     */
 }

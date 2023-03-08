@@ -1,17 +1,37 @@
 package Services;
 
 import Models.Event;
+import Requests.SingleEventRequest;
+import Responses.SingleEventResponse;
+import Responses.ErrorResponse;
 
+/**
+ * Implements finding a single event
+ */
 public class SingleEvent {
+    /**
+     * classes copy of request
+     */
+    SingleEventRequest request;
 
     /**
-     * Find an event by ID
-     * @param eventID the events ID we are searching for
-     * @param userID the user that this event is related to
-     * @return an Event object that matches the ID
+     * Constructor
+     * @param request Sing.Eve.Req. object
      */
-    public Event find(String eventID, String userID){
-        Event e = null;
-        return e;
+    public SingleEvent(SingleEventRequest request) {
+        this.request = request;
     }
+
+    /**
+     * finds a single event
+     * @return a Sing.Eve.Resp. object
+     */
+    public SingleEventResponse find(){
+        SingleEventResponse response = null;
+        return response;
+    }
+
+    /*
+    1. Return the single event object with the specified ID related to current user, determined by authtoken
+     */
 }

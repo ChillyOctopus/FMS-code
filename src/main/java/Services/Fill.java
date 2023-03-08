@@ -1,30 +1,40 @@
 package Services;
 
+import Requests.FillRequest;
+import Responses.FillResponse;
+import Responses.ErrorResponse;
+
+/**
+ * Implements Fill
+ */
 public class Fill {
 
     /**
-     * fills x generations of faux ancestors.
-     * @param personID the person we are giving ancestors (usually user)
-     * @param num the number of generations we create
+     * classes copy of request
      */
-    public void fillGenerations(String personID, int num){
+    private FillRequest request;
+
+    /**
+     * Constructor
+     * @param request Fill.Req. object
+     */
+    public Fill(FillRequest request){
+        this.request = request;
     }
 
     /**
-     * fills 4 generations of faux ancestors
-     * @param personID the person we are giving ancestors (usually user)
+     * Fills generations in
+     * @return a Fill.Resp. object
      */
-    public void fillGenDef(String personID){
-
+    public FillResponse fill(){
+        FillResponse response = null;
+        return response;
     }
 
-    /**
-     * fills a person with faux events
-     * @param personID the person (not user) we are making interesting.
+    /*
+    1. Username must be registered.
+    2. Delete data in database associated with username, if any.
+    3. Populate with X generations for the username.
      */
-    public void fillEvents(String personID){
-
-    }
-
 
 }
