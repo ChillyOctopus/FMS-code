@@ -20,13 +20,14 @@ public class BaseDAO {
     }
 
     /**
-     *
+     * Finding an individual record, generic.
      * @param tableName using a generic table
      * @param pkey using a primary key
      * @param pKeyVal checking a value
      * @return returns the result set for the classes to build on.
+     * @throws DataAccessException
      */
-    public ResultSet getRecord(String tableName, String pkey, String pKeyVal){
+    public ResultSet getRecord(String tableName, String pkey, String pKeyVal) throws DataAccessException {
         String sql = "SELECT * FROM ? WHERE ? = ?";
         try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)) {
 
@@ -39,9 +40,6 @@ public class BaseDAO {
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
             System.out.println("Failed to \"get record\" with SQL from BaseDAO\n");
-        } catch (DataAccessException ex){
-            System.out.println(ex.getMessage());
-            System.out.println("Failed to get connection in \"get record\" of BaseDAO\n");
         }
 
         //If here, we threw an exception somewhere.

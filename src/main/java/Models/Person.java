@@ -42,9 +42,9 @@ public class Person {
      * @param firstName Person's first name
      * @param lastName Person's last name
      * @param gender Person's gender
-     * @param fatherID the ID of Person's father
-     * @param motherID the ID of Person's mother
-     * @param spouseID the ID of Person's spouse
+     * @param fatherID the ID of Person's father (optional)
+     * @param motherID the ID of Person's mother (optional)
+     * @param spouseID the ID of Person's spouse (optional)
      */
     public Person(String personID, String associatedUsername, String firstName, String lastName, String gender, String fatherID, String motherID, String spouseID) {
         this.personID = personID;

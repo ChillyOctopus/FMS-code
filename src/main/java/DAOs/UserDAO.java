@@ -1,11 +1,11 @@
 package DAOs;
 import Models.User;
+import org.jetbrains.annotations.NotNull;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedList;
-import java.util.List;
 
 
 /**
@@ -23,7 +23,7 @@ public class UserDAO extends BaseDAO{
      * @param user the object we are inserting.
      * @throws DataAccessException
      */
-    public void insert(User user) throws DataAccessException {
+    public void insert(@NotNull User user) throws DataAccessException {
         //First check if anything the user has is null, needs to be a full object
         if(user.getUsername() == null ||
            user.getPassword() == null ||
@@ -57,9 +57,10 @@ public class UserDAO extends BaseDAO{
      * Returns a single user based on ID.
      * @param ID the ID we are searching for.
      * @return the User object from the database.
+     * @throws DataAccessException
      */
-    public User findByID(String ID){
-        ResultSet rs = getRecord("user", "personID", ID);
+    public User find(String ID) throws DataAccessException{
+        ResultSet rs = getRecord("User", "personID", ID);
         try{
             if(rs.first()){
                 return new User(
@@ -83,29 +84,11 @@ public class UserDAO extends BaseDAO{
     }
 
     /**
-     * Deletes a user given their username.
-     * @param username the username we are deleting from database.
-     */
-    public void delete(String username){
-        try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(deleteSQL)){
-            prepStmt.setString(1,username);
-            prepStmt.executeQuery();
-            DB.closeConnection(true);
-
-        } catch (DataAccessException ex){
-            System.out.println(ex.getMessage());
-            System.out.println("Couldn't open connection\n");
-        } catch (SQLException ex){
-            System.out.println(ex.getMessage());
-            System.out.println("Couldn't prepare statement or execute delete.");
-        }
-    }
-
-    /**
      * Returns all the users in the Database.
      * @return A list of User objects.
+     * @throws DataAccessException
      */
-    public LinkedList<User> findAll(){
+    public LinkedList<User> findAll() throws DataAccessException{
         LinkedList<User> users = new LinkedList<>();
 
         try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(findAllSQL)){
@@ -128,9 +111,6 @@ public class UserDAO extends BaseDAO{
                 System.out.println("Result set was empty.\n");
             }
 
-        } catch (DataAccessException ex){
-            System.out.println(ex.getMessage());
-            System.out.println("Couldn't get connection");
         } catch (SQLException ex){
             System.out.println(ex.getMessage());
             System.out.println("Either couldn't prepare statement or translate data to objects.");
@@ -141,14 +121,29 @@ public class UserDAO extends BaseDAO{
     }
 
     /**
-     * Clears all data from User table.
+     * Deletes a user given their username.
+     * @param username the username we are deleting from database.
+     * @throws DataAccessException
      */
-    public void clear(){
+    public void delete(String username) throws DataAccessException {
+        try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(deleteSQL)){
+            prepStmt.setString(1,username);
+            prepStmt.executeQuery();
+            DB.closeConnection(true);
+
+        } catch (SQLException ex){
+            System.out.println(ex.getMessage());
+            System.out.println("Couldn't prepare statement or execute delete.");
+        }
+    }
+
+    /**
+     * Clears all data from User table.
+     * @throws DataAccessException
+     */
+    public void clear() throws DataAccessException{
         try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(clearSQL)){
             prepStmt.executeQuery();
-        } catch (DataAccessException ex){
-            System.out.println(ex.getMessage());
-            System.out.println("Couldn't get connection\n");
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
             System.out.println("Couldn't prepare statement or clear user table data.\n");
