@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Did all response objects, whew.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Requests/GetAllRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Clear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Clear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/EventTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/GetAllEvents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/FamilyTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/GetAllPersons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Fill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Fill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Load.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Load.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/SingleEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/SingleEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/SinglePerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/SinglePerson.java" afterDir="false" />
+    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Double checked javadoc.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +223,28 @@
       <option name="project" value="LOCAL" />
       <updated>1678234629173</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Did all service classes.">
+      <created>1678239998770</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1678239998770</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Did all service classes.">
+      <created>1678240013591</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1678240013591</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Double checked javadoc.">
+      <created>1678240169543</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1678240169543</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -283,6 +296,8 @@
     <MESSAGE value="Updated javadoc for DAOs and Model classes" />
     <MESSAGE value="Did all request objects." />
     <MESSAGE value="Did all response objects, whew." />
-    <option name="LAST_COMMIT_MESSAGE" value="Did all response objects, whew." />
+    <MESSAGE value="Did all service classes." />
+    <MESSAGE value="Double checked javadoc." />
+    <option name="LAST_COMMIT_MESSAGE" value="Double checked javadoc." />
   </component>
 </project>
