@@ -2,31 +2,17 @@ package Services;
 
 import Requests.FillRequest;
 import Responses.FillResponse;
-import Responses.ErrorResponse;
 
 /**
  * Implements Fill
  */
 public class Fill {
-
-    /**
-     * classes copy of request
-     */
-    private FillRequest request;
-
-    /**
-     * Constructor
-     * @param request Fill.Req. object
-     */
-    public Fill(FillRequest request){
-        this.request = request;
-    }
-
     /**
      * Fills generations in
+     * @param request Fill.Req. object
      * @return a Fill.Resp. object
      */
-    public FillResponse fill(){
+    public FillResponse fill(FillRequest request){
         FillResponse response = null;
         return response;
     }

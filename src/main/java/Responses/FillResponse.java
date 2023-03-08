@@ -3,21 +3,13 @@ package Responses;
 /**
  * The response body for Fill.
  */
-public class FillResponse {
-    /**
-     * the message we will send
-     */
-    public String message;
-    /**
-     * the boolean state of whether our service worked or not
-     */
-    public boolean success = true;
-
+public class FillResponse extends BaseResponse{
     /**
      * Constructor
      * @param message the message we are passing on
+     * @param success the state of the request
      */
-    public FillResponse(String message) {
-        this.message = message;
+    public FillResponse(String message, boolean success) {
+        super(message,success);
     }
 }

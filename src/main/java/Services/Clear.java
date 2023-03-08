@@ -1,8 +1,6 @@
 package Services;
 
-import Requests.ClearRequest;
 import Responses.ClearResponse;
-import Responses.ErrorResponse;
 
 /**
  * Implements clear

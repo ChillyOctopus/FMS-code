@@ -1,9 +1,7 @@
 package Services;
 
-import Models.Person;
 import Requests.RegisterRequest;
 import Responses.RegisterResponse;
-import Responses.ErrorResponse;
 
 import java.util.Random;
 
@@ -11,25 +9,12 @@ import java.util.Random;
  * Implements register
  */
 public class Register {
-
-    /**
-     * classes copy of request object
-     */
-    private RegisterRequest request;
-
-    /**
-     * Constructor
-     * @param request the Reg.Req. object
-     */
-    public Register(RegisterRequest request) {
-        this.request = request;
-    }
-
-    /**
+     /**
      * Registers the user.
+     * @param request the Reg.Req. object
      * @return a Reg.Resp. object.
      */
-    public RegisterResponse register() {
+    public RegisterResponse register(RegisterRequest request) {
         RegisterResponse response = null;
         return response;
     }

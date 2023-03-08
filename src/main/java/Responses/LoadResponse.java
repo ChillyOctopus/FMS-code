@@ -3,21 +3,13 @@ package Responses;
 /**
  * The response body for Load.
  */
-public class LoadResponse {
-    /**
-     * the message we will send
-     */
-    public String message;
-    /**
-     * the boolean state of whether our service worked or not
-     */
-    public boolean success = true;
-
+public class LoadResponse extends BaseResponse{
     /**
      * Constructor
      * @param message the message we are passing on
+     * @param success the state of the request
      */
-    public LoadResponse(String message) {
-        this.message = message;
+    public LoadResponse(String message, boolean success) {
+        super(message,success);
     }
 }

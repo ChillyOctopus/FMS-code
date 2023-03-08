@@ -1,32 +1,18 @@
 package Services;
 
-import Models.Person;
 import Requests.SinglePersonRequest;
 import Responses.SinglePersonResponse;
-import Responses.ErrorResponse;
 
 /**
  * Implements finding a single person
  */
 public class SinglePerson {
     /**
-     * classes copy of request
-     */
-    SinglePersonRequest request;
-
-    /**
-     * Constructor
-     * @param request Sing.Pers.Req. object
-     */
-    public SinglePerson(SinglePersonRequest request) {
-        this.request = request;
-    }
-
-    /**
      * finds a single person
+     * @param request Sing.Pers.Req. object
      * @return a Sing.Pers.Resp. object
      */
-    public SinglePersonResponse find(){
+    public SinglePersonResponse find(SinglePersonRequest request){
         SinglePersonResponse response = null;
         return response;
     }

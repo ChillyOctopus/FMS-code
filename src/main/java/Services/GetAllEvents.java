@@ -8,23 +8,11 @@ import Responses.AllEventResponse;
  */
 public class GetAllEvents {
     /**
-     * classes copy of request
-     */
-    private GetAllRequest request;
-
-    /**
-     * Constructor
-     * @param request the G.A.Req. object
-     */
-    public GetAllEvents(GetAllRequest request) {
-        this.request = request;
-    }
-
-    /**
      * finds all events
+     * @param request the G.A.Req. object
      * @return the All.Eve.Resp. object
      */
-    public AllEventResponse findAll(){
+    public AllEventResponse findAll(GetAllRequest request){
         AllEventResponse response = null;
         return response;
     }

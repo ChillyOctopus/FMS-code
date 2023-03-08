@@ -8,23 +8,11 @@ import Responses.AllPersonResponse;
  */
 public class GetAllPersons {
     /**
-     * classes copy of request
-     */
-    private GetAllRequest request;
-
-    /**
-     * Constructor
-     * @param request the G.A.Req. object
-     */
-    public GetAllPersons(GetAllRequest request) {
-        this.request = request;
-    }
-
-    /**
      * finds all persons
+     * @param request the G.A.Req. object
      * @return the All.Pers.Resp. object
      */
-    public AllPersonResponse findAll(){
+    public AllPersonResponse findAll(GetAllRequest request){
         AllPersonResponse response = null;
         return response;
     }

@@ -3,7 +3,7 @@ package Responses;
 /**
  * The response body for a single Event.
  */
-public class SingleEventResponse {
+public class SingleEventResponse extends BaseResponse{
     /**
      * the associated Username to return
      */
@@ -36,10 +36,6 @@ public class SingleEventResponse {
      * the year to return
      */
     public int year;
-    /**
-     * the boolean state of whether our service worked or not
-     */
-    public boolean success = true;
 
     /**
      * Constructor
@@ -52,7 +48,8 @@ public class SingleEventResponse {
      * @param eventType the type of event
      * @param year the year it happened
      */
-    public SingleEventResponse(String associatedUsername, String personID, float latitude, float longitude, String country, String city, String eventType, int year) {
+    public SingleEventResponse(String associatedUsername, String personID, float latitude, float longitude, String country, String city, String eventType, int year, String message, boolean success) {
+        super(message,success);
         this.associatedUsername = associatedUsername;
         this.personID = personID;
         this.latitude = latitude;

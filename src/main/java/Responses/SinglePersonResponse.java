@@ -3,7 +3,7 @@ package Responses;
 /**
  * The response body for a single Person.
  */
-public class SinglePersonResponse {
+public class SinglePersonResponse extends BaseResponse{
     /**
      * the associated Username to return
      */
@@ -36,30 +36,33 @@ public class SinglePersonResponse {
      * the spouse ID to return
      */
     public String spouseID;
-    /**
-     * the boolean state of whether our service worked or not
-     */
-    public boolean success = true;
+
+    public void setFatherID(String fatherID) {
+        this.fatherID = fatherID;
+    }
+
+    public void setMotherID(String motherID) {
+        this.motherID = motherID;
+    }
+
+    public void setSpouseID(String spouseID) {
+        this.spouseID = spouseID;
+    }
 
     /**
      * Constructor
-     * @param associatedUsername the username who is a descendent of person
+     * @param associatedUsername the username who is a descendant of person
      * @param personID the persons id
      * @param firstName their first name
      * @param lastName their last name
      * @param gender their gender
-     * @param fatherID their fathers ID (optional)
-     * @param motherID their mothers ID (optional)
-     * @param spouseID their spouses ID (optional)
      */
-    public SinglePersonResponse(String associatedUsername, String personID, String firstName, String lastName, String gender, String fatherID, String motherID, String spouseID) {
+    public SinglePersonResponse(String associatedUsername, String personID, String firstName, String lastName, String gender,String message, boolean success) {
+        super(message,success);
         this.associatedUsername = associatedUsername;
         this.personID = personID;
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
-        this.fatherID = fatherID;
-        this.motherID = motherID;
-        this.spouseID = spouseID;
     }
 }

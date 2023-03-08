@@ -4,9 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Double checked javadoc.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Final Commit/Push for the day.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/AllEventResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/AllEventResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/AllPersonResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/AllPersonResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/ClearResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/ClearResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/BaseResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/FillResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/FillResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/LoadResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/LoadResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/LoginResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/RegisterResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/RegisterResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/SingleEventResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/SingleEventResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/SinglePersonResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/SinglePersonResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Clear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Clear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Fill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Fill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/GetAllEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/GetAllEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/GetAllPersons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/GetAllPersons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Load.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Load.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/SingleEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/SingleEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/SinglePerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/SinglePerson.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,22 +68,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/adam/jacob/jacob_java/FamilyMapServerStudent",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.30804598",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/adam/jacob/jacob_java/FamilyMapServerStudent&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.30804598&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/Services" />
@@ -244,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678240169543</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Final Commit/Push for the day.">
+      <created>1678242779615</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1678242779615</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -298,6 +324,7 @@
     <MESSAGE value="Did all response objects, whew." />
     <MESSAGE value="Did all service classes." />
     <MESSAGE value="Double checked javadoc." />
-    <option name="LAST_COMMIT_MESSAGE" value="Double checked javadoc." />
+    <MESSAGE value="Final Commit/Push for the day." />
+    <option name="LAST_COMMIT_MESSAGE" value="Final Commit/Push for the day." />
   </component>
 </project>

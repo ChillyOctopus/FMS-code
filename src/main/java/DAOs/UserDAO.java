@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * In-between for User models and database.
  */
-public class UserDAO{
+public class UserDAO extends BaseDAO{
 
     /**
      * Inserting a User object into the database.
@@ -27,7 +27,6 @@ public class UserDAO{
      */
     public User find(String ID){
         UserDAO dao = new UserDAO();
-        /*
         ResultSet rs = dao.getRecord("user", "personID", ID);
         if(rs!=null){
             try{
@@ -44,7 +43,6 @@ public class UserDAO{
                 System.err.println("Something went wrong returning user..." + ex.getMessage());
             }
         }
-         */
         return null;
     }
 

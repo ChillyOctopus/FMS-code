@@ -3,7 +3,7 @@ package Responses;
 /**
  * The response body for Register.
  */
-public class RegisterResponse {
+public class RegisterResponse extends BaseResponse{
     /**
      * the authtoken to return
      */
@@ -16,18 +16,17 @@ public class RegisterResponse {
      * the personID to return
      */
     public String personID;
-    /**
-     * the boolean state of whether our service worked or not
-     */
-    public boolean success = true;
 
     /**
      * Constructor
+     * @param success the state of the request
+     * @param message message we are passing on
      * @param authtoken the authtoken we are returning
      * @param username the username we are returning
      * @param personID the personID we are returning
      */
-    public RegisterResponse(String authtoken, String username, String personID) {
+    public RegisterResponse(String authtoken, String username, String personID, String message, boolean success) {
+        super(message,success);
         this.authtoken = authtoken;
         this.username = username;
         this.personID = personID;
