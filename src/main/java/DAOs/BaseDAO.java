@@ -4,22 +4,19 @@ import java.io.File;
 import java.sql.*;
 
 public class BaseDAO {
-
-    Connection connection = null;
+    Database DB;
 
     /**
-     * abstracting out the DAO, much can be handled in here.
+     * abstracting out the DAO
      */
     public BaseDAO() {
+        DB = new Database();
 
         try {
-            String dbName = "/home/adam/jacob/jacob_java/FMS.db";
-            String connectionURL = "jdbc:sqlite:" + dbName;
-            connection = DriverManager.getConnection(connectionURL);
-
-        } catch (SQLException ex){
-            System.out.println("SQL Exception thrown!\n");
-            System.err.println(ex.getMessage());
+            DB.openConnection();
+        } catch(DataAccessException ex){
+            System.out.println("Failed to open connection.");
+            System.out.println(ex.getMessage());
         }
     }
 
@@ -32,16 +29,23 @@ public class BaseDAO {
      */
     public ResultSet getRecord(String tableName, String pkey, String pKeyVal){
         String sql = "SELECT * FROM ? WHERE ? = ?";
-        try(
-                PreparedStatement pstmt = connection.prepareStatement(sql);
-        ) {
-            pstmt.setString(1, tableName);
-            pstmt.setString(2, pkey);
-            pstmt.setString(3, pKeyVal);
-            return pstmt.executeQuery();
+        try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)) {
+
+            prepStmt.setString(1, tableName);
+            prepStmt.setString(2, pkey);
+            prepStmt.setString(3, pKeyVal);
+
+            return prepStmt.executeQuery();
+
         } catch (SQLException ex) {
-            System.out.println("Handled hah\n");
+            System.out.println(ex.getMessage());
+            System.out.println("Failed to \"get record\" with SQL from BaseDAO\n");
+        } catch (DataAccessException ex){
+            System.out.println(ex.getMessage());
+            System.out.println("Failed to get connection in \"get record\" of BaseDAO\n");
         }
+
+        //If here, we threw an exception somewhere.
         return null;
     }
 

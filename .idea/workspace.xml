@@ -4,28 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Final Commit/Push for the day.">
+    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Modified the responses to have a &quot;base response&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/createTableStatements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/createTableStatements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/BaseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/BaseDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/AllEventResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/AllEventResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/AllPersonResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/AllPersonResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/ClearResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/ClearResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/BaseResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/FillResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/FillResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/LoadResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/LoadResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/LoginResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/RegisterResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/RegisterResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/SingleEventResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/SingleEventResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/SinglePersonResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/SinglePersonResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Clear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Clear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Fill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Fill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/GetAllEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/GetAllEvents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/GetAllPersons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/GetAllPersons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Load.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Load.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/SingleEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/SingleEvent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/SinglePerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/SinglePerson.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678242779615</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Modified the responses to have a &quot;base response&quot;">
+      <created>1678293802346</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1678293802346</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -325,6 +315,7 @@
     <MESSAGE value="Did all service classes." />
     <MESSAGE value="Double checked javadoc." />
     <MESSAGE value="Final Commit/Push for the day." />
-    <option name="LAST_COMMIT_MESSAGE" value="Final Commit/Push for the day." />
+    <MESSAGE value="Modified the responses to have a &quot;base response&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified the responses to have a &quot;base response&quot;" />
   </component>
 </project>
