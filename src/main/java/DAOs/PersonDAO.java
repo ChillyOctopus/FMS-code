@@ -47,7 +47,7 @@ public class PersonDAO extends BaseDAO{
             prepStmt.executeQuery();
         } catch (SQLException ex){
             System.out.println(ex.getMessage());
-            System.out.println("Couldn't prepare statement, set strings, or execute query for insert person.\n");
+            throw new DataAccessException("Couldn't prepare statement, set strings, or execute query for insert person.\n");
         }
     }
 
@@ -76,7 +76,7 @@ public class PersonDAO extends BaseDAO{
 
         } catch(SQLException ex){
             System.out.println(ex.getMessage());
-            System.err.println("Couldn't translate result set to person object\n");
+            throw new DataAccessException("Couldn't translate result set to person object\n");
         }
 
         return null;
@@ -115,7 +115,7 @@ public class PersonDAO extends BaseDAO{
 
         } catch (SQLException ex){
             System.out.println(ex.getMessage());
-            System.out.println("Either couldn't prepare statement or translate data to objects.");
+            throw new DataAccessException("Either couldn't prepare statement or translate data to objects.");
         }
 
         return persons;
@@ -134,7 +134,7 @@ public class PersonDAO extends BaseDAO{
 
         } catch (SQLException ex){
             System.out.println(ex.getMessage());
-            System.out.println("Couldn't prepare statement or execute delete.");
+            throw new DataAccessException("Couldn't prepare statement or execute delete.");
         }
     }
 
@@ -147,7 +147,7 @@ public class PersonDAO extends BaseDAO{
             prepStmt.executeQuery();
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
-            System.out.println("Couldn't prepare statement or clear person table data.\n");
+            throw new DataAccessException("Couldn't prepare statement or clear person table data.\n");
         }
     }
 }

@@ -49,7 +49,7 @@ public class UserDAO extends BaseDAO{
             prepStmt.executeQuery();
         } catch (SQLException ex){
             System.out.println(ex.getMessage());
-            System.out.println("Failed to insert User.\n");
+            throw new DataAccessException("Failed to insert User.\n");
         }
     }
 
@@ -77,7 +77,7 @@ public class UserDAO extends BaseDAO{
 
         } catch(SQLException ex){
             System.out.println(ex.getMessage());
-            System.err.println("Couldn't translate result set to user object\n");
+            throw new DataAccessException("Couldn't translate result set to user object\n");
         }
 
         return null;
@@ -113,7 +113,7 @@ public class UserDAO extends BaseDAO{
 
         } catch (SQLException ex){
             System.out.println(ex.getMessage());
-            System.out.println("Either couldn't prepare statement or translate data to objects.");
+            throw new DataAccessException("Either couldn't prepare statement or translate data to objects.");
         }
 
         return users;
@@ -133,7 +133,7 @@ public class UserDAO extends BaseDAO{
 
         } catch (SQLException ex){
             System.out.println(ex.getMessage());
-            System.out.println("Couldn't prepare statement or execute delete.");
+            throw new DataAccessException("Couldn't prepare statement or execute delete.");
         }
     }
 
@@ -146,7 +146,7 @@ public class UserDAO extends BaseDAO{
             prepStmt.executeQuery();
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
-            System.out.println("Couldn't prepare statement or clear user table data.\n");
+            throw new DataAccessException("Couldn't prepare statement or clear user table data.\n");
         }
     }
 

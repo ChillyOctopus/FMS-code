@@ -4,13 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="UserDAO finished.">
+    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="PersonDAO finished.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/BaseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/BaseDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/EventDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/EventDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/PersonDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HelloWorld.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/AuthtokenDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/AuthtokenDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/EventDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/EventDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/PersonDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/PersonDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/abstractDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DB/AuthtokenDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DB/EventDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DB/PersonDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DB/UserDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HelloWorld.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/Authtoken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Authtoken.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/Event.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Event.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Req_Res/ErrorResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/Clear.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/Clear.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/EventTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/FamilyTree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/Fill.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/Fill.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/Load.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/Load.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/Register.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/SingleEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/SingleEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/SinglePerson.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/SinglePerson.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +108,14 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Server">
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Server" />
+      <module name="FamilyMapServerStudent" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserDAO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="DAOs.UserDAO" />
       <module name="FamilyMapServerStudent" />
@@ -100,8 +129,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServerTest.testValidNewRegister" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FamilyMapServerStudent" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="passoff.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="passoff" />
+      <option name="MAIN_CLASS_NAME" value="passoff.ServerTest" />
+      <option name="METHOD_NAME" value="testValidNewRegister(org.junit.jupiter.api.TestInfo)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Server" />
+        <item itemvalue="JUnit.ServerTest.testValidNewRegister" />
         <item itemvalue="Application.UserDAO" />
       </list>
     </recent_temporary>
@@ -276,7 +323,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678302716753</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="PersonDAO finished.">
+      <created>1678305228774</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1678305228774</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -334,6 +388,7 @@
     <MESSAGE value="Modified the responses to have a &quot;base response&quot;" />
     <MESSAGE value="Modified table statements, and UserDAO implementations." />
     <MESSAGE value="UserDAO finished." />
-    <option name="LAST_COMMIT_MESSAGE" value="UserDAO finished." />
+    <MESSAGE value="PersonDAO finished." />
+    <option name="LAST_COMMIT_MESSAGE" value="PersonDAO finished." />
   </component>
 </project>
