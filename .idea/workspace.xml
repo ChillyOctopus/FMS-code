@@ -4,13 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Changed the DAOs a little - retested.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Handlers/RegisterHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ServerTest.java" afterDir="false" />
+    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Server Implementations">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ExampleCode/ClaimRouteHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ExampleCode/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ExampleCode/ListGamesHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ExampleCode/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Handlers/RegisterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Handlers/RegisterHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JSONexample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ExampleCode/JSONexample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Requests/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Requests/RegisterRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/RegisterResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/RegisterResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/EventDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/EventDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DAOs/UserDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DAOs/UserDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ServerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Handlers/RegisterHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Handlers/RegisterHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JSONexample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Requests/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Requests/RegisterRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Responses/RegisterResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Responses/RegisterResponse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/Register.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ServerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ServerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +115,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ServerTest">
+  <component name="RunManager" selected="JUnit.UserDAOTest">
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Server" />
       <module name="FamilyMapServerStudent" />
@@ -162,10 +179,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserDAOTest" />
         <item itemvalue="JUnit.ServerTest" />
         <item itemvalue="Application.Server" />
         <item itemvalue="JUnit.EventDAOTest" />
-        <item itemvalue="JUnit.UserDAOTest" />
         <item itemvalue="JUnit.PersonDAOTest" />
       </list>
     </recent_temporary>
@@ -410,7 +427,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678380510632</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Server Implementations">
+      <created>1678385429039</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1678385429039</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Server Implementations">
+      <created>1678385442578</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1678385442578</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -452,7 +483,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Base setup, classes and directories" />
     <MESSAGE value="Modifying classes, added table statements." />
     <MESSAGE value="Changing git remote" />
     <MESSAGE value="adding test file." />
@@ -477,7 +507,8 @@
     <MESSAGE value="Updated Authtoken, still have work to do." />
     <MESSAGE value="Worked the test classes - User and Person done." />
     <MESSAGE value="Changed the DAOs a little - retested." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed the DAOs a little - retested." />
+    <MESSAGE value="Server Implementations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Server Implementations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

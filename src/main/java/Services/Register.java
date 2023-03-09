@@ -1,7 +1,11 @@
 package Services;
 
+import DAOs.DataAccessException;
 import Requests.RegisterRequest;
 import Responses.RegisterResponse;
+
+import Models.User;
+import DAOs.UserDAO;
 
 import java.util.Random;
 
@@ -15,7 +19,29 @@ public class Register {
      * @return a Reg.Resp. object.
      */
     public RegisterResponse register(RegisterRequest request) {
-        RegisterResponse response = null;
+
+        String Userid = generateUniqueString();
+        User u = new User(
+                request.getUsername(),
+                request.getPassword(),
+                request.getEmail(),
+                request.getFirstName(),
+                request.getLastName(),
+                request.getGender(),
+                Userid);
+
+        UserDAO dao = new UserDAO();
+
+
+        try {
+            dao.insert(u);
+        }catch(DataAccessException ex){
+            RegisterResponse response = new RegisterResponse("Something went wrong", false);
+            return response;
+        }
+
+        String authtoken = generateUniqueString();
+        RegisterResponse response = new RegisterResponse(authtoken, u.getUsername(), u.getPersonID(), null, true);
         return response;
     }
 
@@ -25,15 +51,15 @@ public class Register {
     private static final String TOKENCHARS = "01234567890`~!@#$%^&><AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
 
     /**
-     * Generating our authtokens
+     * Generating our id's & authtokens
      * @return the authtoken
      */
-    private String generateAuthtoken(){
+    private String generateUniqueString(){
         Random random = new Random();
         StringBuilder result = new StringBuilder();
 
         int count = random.nextInt(9);
-        count += 8;
+        count += 12;
 
         for(int i = 0; i < count; i++){
             result.append(TOKENCHARS.charAt(random.nextInt(TOKENCHARS.length())));
