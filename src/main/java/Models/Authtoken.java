@@ -33,7 +33,6 @@ public class Authtoken {
         this.timeStamp = timeStamp;
     }
 
-
     /**
      * Generates a random string for the authtoken
      * @return returns randomized string

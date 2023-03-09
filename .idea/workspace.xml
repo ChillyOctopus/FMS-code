@@ -4,19 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Got tests working - turns out a base DAO isn't a bad idea if you are working on a massive project and can generalize out a lot of objects, but it isn't worth it for a smaller project like this. Also changed create table statements.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/EventDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/EventDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/PersonDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Event.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DAOs/PersonDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DAOs/PersonDAOTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/BaseDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/BaseDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/EventDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/EventDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/PersonDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/PersonDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/DAOs/PersonDAOTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DAOs/PersonDAOTest.class" afterDir="false" />
+    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Gave model classes &quot;Equals&quot; function, modified DAOs further, made some test cases.">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Authtoken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Authtoken.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -398,7 +387,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678324725662</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Gave model classes &quot;Equals&quot; function, modified DAOs further, made some test cases.">
+      <created>1678326476305</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1678326476305</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -461,7 +457,8 @@
     <MESSAGE value="SQLITE + server stuff." />
     <MESSAGE value="Got tests working - turns out a base DAO isn't a bad idea if you are working on a massive project and can generalize out a lot of objects, but it isn't worth it for a smaller project like this." />
     <MESSAGE value="Got tests working - turns out a base DAO isn't a bad idea if you are working on a massive project and can generalize out a lot of objects, but it isn't worth it for a smaller project like this. Also changed create table statements." />
-    <option name="LAST_COMMIT_MESSAGE" value="Got tests working - turns out a base DAO isn't a bad idea if you are working on a massive project and can generalize out a lot of objects, but it isn't worth it for a smaller project like this. Also changed create table statements." />
+    <MESSAGE value="Gave model classes &quot;Equals&quot; function, modified DAOs further, made some test cases." />
+    <option name="LAST_COMMIT_MESSAGE" value="Gave model classes &quot;Equals&quot; function, modified DAOs further, made some test cases." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
