@@ -1,8 +1,8 @@
+import Handlers.RegisterHandler;
 import com.sun.net.httpserver.*;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.util.concurrent.Executor;
 
 public class Server {
 
@@ -10,6 +10,9 @@ public class Server {
         try {
             HttpServer server = HttpServer.create();
             server.bind(new InetSocketAddress(8080),0);
+
+            server.createContext("/user/register", new RegisterHandler());
+
             server.start();
 
         } catch (IOException ex){
