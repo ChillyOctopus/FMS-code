@@ -36,7 +36,7 @@ public class Register {
         try {
             dao.insert(u);
         }catch(DataAccessException ex){
-            RegisterResponse response = new RegisterResponse("Something went wrong", false);
+            RegisterResponse response = new RegisterResponse(ex.getMessage(), false);
             return response;
         }
 
@@ -48,7 +48,7 @@ public class Register {
     /**
      * The charset we pull from to make the authtokens.
      */
-    private static final String TOKENCHARS = "01234567890`~!@#$%^&><AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+    private static final String TOKENCHARS = "0123456789`~!@#$%^&><()-_=+|}]{[AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
 
     /**
      * Generating our id's & authtokens

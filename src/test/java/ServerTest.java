@@ -18,12 +18,14 @@ public class ServerTest {
     @Test
     public void userReg(){
         String postReq =
+                "{"+
                 "\"username\":\"susan\"," +
                 "\"password\":\"mysecret\"," +
                 "\"email\":\"susan@gmail.com\"," +
                 "\"firstName\":\"Susan\"," +
                 "\"lastName\":\"Ellis\"," +
-                "\"gender\":\"f";
+                "\"gender\":\"f\""+
+                "}";
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("http://localhost:8080/user/register"))

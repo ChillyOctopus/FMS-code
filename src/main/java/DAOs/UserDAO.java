@@ -29,8 +29,13 @@ public class UserDAO extends BaseDAO{
            user.getGender() == null ||
            user.getPersonID() == null){
             DB.closeConnection(false);
-            throw new DataAccessException("1 or more elements of user object are null - will not insert into database.\n");
+            throw new DataAccessException("1 or more elements of user object are null - will not insert into database.");
         }
+
+        if(usernameTaken(user.getUsername())){
+            throw new DataAccessException("Username already exists in database.");
+        }
+
         try (PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
             prepStmt.setString(1,user.getUsername());
             prepStmt.setString(2,user.getPassword());
@@ -44,7 +49,7 @@ public class UserDAO extends BaseDAO{
         } catch (SQLException ex){
             System.out.println(ex.getMessage());
             DB.closeConnection(false);
-            throw new DataAccessException("Failed to insert User.\n");
+            throw new DataAccessException("Failed to insert User.");
         }
 
         DB.closeConnection(true);
@@ -81,6 +86,28 @@ public class UserDAO extends BaseDAO{
             System.out.println(ex.getMessage());
             DB.closeConnection(false);
             throw new DataAccessException("Couldn't translate result set to user object\n");
+        }
+    }
+
+    /**
+     * Determines whether username is taken already
+     * @param username the username we are checking.
+     * @return a boolean whether it is taken.
+     * @throws DataAccessException
+     */
+    private boolean usernameTaken(String username) throws DataAccessException{
+        String sql = "SELECT * FROM User WHERE username = ?";
+        try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
+            prepStmt.setString(1,username);
+            ResultSet rs = prepStmt.executeQuery();
+            if(rs.next()){
+                return true;
+            } else {
+                return false;
+            }
+        } catch(SQLException ex){
+            System.out.println(ex.getMessage());
+            throw new DataAccessException("Error using SQL to find user by username. (UserDAO)\n");
         }
     }
 

@@ -19,9 +19,10 @@ public class RegisterHandler implements HttpHandler {
     public void handle(HttpExchange exchange) throws IOException {
 
         boolean success = false;
+        String body = null;
         try {
             //Ensure that it is the right method.
-            if(exchange.getRequestMethod().equalsIgnoreCase("post")){
+            if (exchange.getRequestMethod().equalsIgnoreCase("post")) {
 
                 //Get the request headers
                 Headers reqHeaders = exchange.getRequestHeaders();
@@ -42,33 +43,35 @@ public class RegisterHandler implements HttpHandler {
                 //Call service, which returns a new response object.
                 RegisterResponse response = service.register(request);
 
+
+                // Send the HTTP response back, starting with status code and any headers.
+                exchange.sendResponseHeaders(HttpURLConnection.HTTP_OK, 0);
+                // Close the response body output stream, indicating that the response is complete.
+
                 //translate response object into string
-                String body = gson.toJson(response);
+                body = gson.toJson(response);
                 //Open output stream for response body
                 OutputStream resBody = exchange.getResponseBody();
                 //put into response body
                 resBody.write(body.getBytes());
                 //close the output stream
                 resBody.close();
-
-                // Send the HTTP response back, starting with status code and any headers.
-                exchange.sendResponseHeaders(HttpURLConnection.HTTP_OK, 0);
-                // Close the response body output stream, indicating that the response is complete.
                 exchange.getResponseBody().close();
 
                 success = true;
 
             }
-            if(!success){
+            if (!success) {
                 // The HTTP request was invalid, return a "bad request"
                 exchange.sendResponseHeaders(HttpURLConnection.HTTP_BAD_REQUEST, 0);
                 // Close the response body output stream.
                 exchange.getResponseBody().close();
             }
 
-        } catch(IOException ex){
+        } catch (IOException ex) {
             ex.printStackTrace();
             System.out.println("Issue in Register Handler...\n");
+            System.out.println("Body: " + body);
         }
 
     }

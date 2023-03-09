@@ -4,29 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Server Implementations">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ExampleCode/ClaimRouteHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ExampleCode/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ExampleCode/ListGamesHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ExampleCode/Server.java" afterDir="false" />
+    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Pretty much ran up and down with Register functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Handlers/RegisterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Handlers/RegisterHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/JSONexample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ExampleCode/JSONexample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Requests/RegisterRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Requests/RegisterRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/RegisterResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/RegisterResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DAOs/UserDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DAOs/UserDAOTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ServerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DAOs/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/UserDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Handlers/RegisterHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Handlers/RegisterHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JSONexample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Requests/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Requests/RegisterRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Responses/RegisterResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Responses/RegisterResponse.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Services/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/Register.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/DAOs/UserDAOTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DAOs/UserDAOTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/ServerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ServerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +104,14 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserDAOTest">
+  <component name="RunManager" selected="Application.Client">
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Client" />
+      <module name="FamilyMapServerStudent" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Server" />
       <module name="FamilyMapServerStudent" />
@@ -133,21 +129,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="DAOs" />
       <option name="MAIN_CLASS_NAME" value="DAOs.EventDAOTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PersonDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FamilyMapServerStudent" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="DAOs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="DAOs" />
-      <option name="MAIN_CLASS_NAME" value="DAOs.PersonDAOTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -179,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UserDAOTest" />
-        <item itemvalue="JUnit.ServerTest" />
+        <item itemvalue="Application.Client" />
         <item itemvalue="Application.Server" />
+        <item itemvalue="JUnit.ServerTest" />
+        <item itemvalue="JUnit.UserDAOTest" />
         <item itemvalue="JUnit.EventDAOTest" />
-        <item itemvalue="JUnit.PersonDAOTest" />
       </list>
     </recent_temporary>
   </component>
@@ -441,7 +422,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678385442578</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Pretty much ran up and down with Register functionality">
+      <created>1678397309586</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1678397309587</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Pretty much ran up and down with Register functionality">
+      <created>1678397417644</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1678397417644</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -483,7 +478,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Modifying classes, added table statements." />
     <MESSAGE value="Changing git remote" />
     <MESSAGE value="adding test file." />
     <MESSAGE value="Further testing" />
@@ -508,7 +502,8 @@
     <MESSAGE value="Worked the test classes - User and Person done." />
     <MESSAGE value="Changed the DAOs a little - retested." />
     <MESSAGE value="Server Implementations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Server Implementations" />
+    <MESSAGE value="Pretty much ran up and down with Register functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pretty much ran up and down with Register functionality" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

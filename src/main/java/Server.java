@@ -28,7 +28,7 @@ public class Server {
 
         server.createContext("/user/register", new RegisterHandler());
         //Default Handler
-        server.createContext("/", (HttpHandler) new FileHandler());
+        //server.createContext("/", (HttpHandler) new FileHandler());
 
         System.out.println("Starting server");
         server.start();
