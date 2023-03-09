@@ -3,11 +3,14 @@ package DAOs;
 import java.io.File;
 import java.sql.*;
 
+/**
+ * abstracting out the DAO
+ */
 public class BaseDAO {
     public Database DB;
 
     /**
-     * abstracting out the DAO
+     * Constructor, opens DB connection.
      */
     public BaseDAO() {
         DB = new Database();
@@ -18,31 +21,4 @@ public class BaseDAO {
             System.out.println(ex.getMessage());
         }
     }
-
-    /**
-     * Finding an individual record, generic.
-     * @param tableName using a generic table
-     * @param pkey using a primary key
-     * @param pKeyVal checking a value
-     * @return returns the result set for the classes to build on.
-     * @throws DataAccessException
-     */
-    public ResultSet getRecord(String tableName, String pkey, String pKeyVal) throws DataAccessException {
-        String sql = "SELECT * FROM " +tableName+ " WHERE ? = ?";
-        try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)) {
-
-            prepStmt.setString(1, pkey);
-            prepStmt.setString(2, pKeyVal);
-
-            return prepStmt.executeQuery();
-
-        } catch (SQLException ex) {
-            System.out.println(ex.getMessage());
-            System.out.println("Failed to \"get record\" with SQL from BaseDAO\n");
-        }
-
-        //If here, we threw an exception somewhere.
-        return null;
-    }
-
 }

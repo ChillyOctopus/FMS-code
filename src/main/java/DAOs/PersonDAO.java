@@ -13,18 +13,13 @@ import java.util.List;
  */
 
 public class PersonDAO extends BaseDAO{
-
-    public final String insertSQL = "INSERT INTO Person VALUES ? ? ? ? ? ? ? ?";
-    public final String findAllSQL = "SELECT * FROM Person WHERE userID = ?";
-    public final String deleteSQL = "DELETE FROM Person WHERE personID = ?";
-    public final String clearSQL = "DELETE FROM Person";
-
     /**
      * Inserting a Person object into database.
      * @param person the object we are inserting.
      * @throws DataAccessException
      */
     public void insert(@NotNull Person person) throws DataAccessException{
+        String sql = "INSERT INTO Person VALUES ? ? ? ? ? ? ? ?";
         if( person.getPersonID() == null ||
             person.getAssociatedUsername() == null ||
             person.getFirstName() == null ||
@@ -34,7 +29,7 @@ public class PersonDAO extends BaseDAO{
             return;
         }
 
-        try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(insertSQL)){
+        try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
             prepStmt.setString(1,person.getPersonID());
             prepStmt.setString(2,person.getAssociatedUsername());
             prepStmt.setString(3,person.getFirstName());
@@ -58,8 +53,10 @@ public class PersonDAO extends BaseDAO{
      * @throws DataAccessException
      */
     public Person find(String ID) throws DataAccessException {
-        ResultSet rs = getRecord("Person", "personID", ID);
-        try{
+        String sql = "SELECT * FROM Person WHERE personID = ?";
+        try (PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
+            prepStmt.setString(1,ID);
+            ResultSet rs = prepStmt.executeQuery();
             if(rs.first()){
                 return new Person(
                         rs.getString("personID"),
@@ -90,8 +87,9 @@ public class PersonDAO extends BaseDAO{
      */
     public LinkedList<Person> findAll(String assocUserID) throws DataAccessException{
         LinkedList<Person> persons = new LinkedList<>();
+        String sql = "SELECT * FROM Person WHERE userID = ?";
 
-        try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(findAllSQL)){
+        try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
             prepStmt.setString(1,assocUserID);
             ResultSet rs = prepStmt.executeQuery();
             if(rs.first()) {
@@ -127,7 +125,8 @@ public class PersonDAO extends BaseDAO{
      * @throws DataAccessException
      */
     public void delete(String personID) throws DataAccessException{
-        try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(deleteSQL)){
+        String sql = "DELETE FROM Person WHERE personID = ?";
+        try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
             prepStmt.setString(1,personID);
             prepStmt.executeQuery();
             DB.closeConnection(true);
@@ -143,7 +142,8 @@ public class PersonDAO extends BaseDAO{
      * @throws DataAccessException
      */
     public void clear() throws DataAccessException{
-        try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(clearSQL)){
+        String sql = "DELETE FROM Person";
+        try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
             prepStmt.executeQuery();
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());

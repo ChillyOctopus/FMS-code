@@ -44,15 +44,16 @@ public class EventDAO extends BaseDAO{
      * @throws DataAccessException
      */
     public Event find(String eventID) throws DataAccessException {
+        String sql = "SELECT * FROM Event WHERE eventID = ?";
         Event event;
-        ResultSet rs;
-        rs = getRecord("Event", "eventID", eventID);
-        try {
+        try (PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
+            prepStmt.setString(1,eventID);
+            ResultSet rs = prepStmt.executeQuery();
             if (rs.next()) {
-                event = new Event(rs.getString("EventID"), rs.getString("AssociatedUsername"),
-                        rs.getString("PersonID"), rs.getFloat("Latitude"), rs.getFloat("Longitude"),
-                        rs.getString("Country"), rs.getString("City"), rs.getString("EventType"),
-                        rs.getInt("Year"));
+                event = new Event(rs.getString("eventID"), rs.getString("associatedUsername"),
+                        rs.getString("personID"), rs.getFloat("latitude"), rs.getFloat("longitude"),
+                        rs.getString("country"), rs.getString("city"), rs.getString("eventType"),
+                        rs.getInt("year"));
                 return event;
             } else {
                 return null;
