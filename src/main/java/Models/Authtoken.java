@@ -1,5 +1,6 @@
 package Models;
 
+import java.util.Objects;
 import java.util.Random;
 
 public class Authtoken {
@@ -78,5 +79,13 @@ public class Authtoken {
 
     public void setTimeStamp(String timeStamp) {
         this.timeStamp = timeStamp;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Authtoken authtoken1 = (Authtoken) o;
+        return Objects.equals(authtoken, authtoken1.authtoken) && Objects.equals(username, authtoken1.username) && Objects.equals(timeStamp, authtoken1.timeStamp);
     }
 }

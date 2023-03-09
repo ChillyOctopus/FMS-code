@@ -1,7 +1,8 @@
 package Models;
 
-public class User {
+import java.util.Objects;
 
+public class User {
     /**
      * User's name
      */
@@ -50,16 +51,6 @@ public class User {
         this.gender = gender;
         this.personID = personID;
     }
-
-
-
-
-
-
-
-
-
-
 
     public String getUsername() {
         return username;
@@ -117,6 +108,11 @@ public class User {
         this.personID = personID;
     }
 
-
-
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return Objects.equals(username, user.username) && Objects.equals(password, user.password) && Objects.equals(email, user.email) && Objects.equals(firstName, user.firstName) && Objects.equals(lastName, user.lastName) && Objects.equals(gender, user.gender) && Objects.equals(personID, user.personID);
+    }
 }

@@ -19,7 +19,7 @@ public class PersonDAO extends BaseDAO{
      * @throws DataAccessException
      */
     public void insert(@NotNull Person person) throws DataAccessException{
-        String sql = "INSERT INTO Person VALUES ? ? ? ? ? ? ? ?";
+        String sql = "INSERT INTO Person (personID, associatedUsername, firstName, lastName, gender, fatherID, motherID, spouseID) VALUES(?,?,?,?,?,?,?,?)";
         if( person.getPersonID() == null ||
             person.getAssociatedUsername() == null ||
             person.getFirstName() == null ||
@@ -27,6 +27,8 @@ public class PersonDAO extends BaseDAO{
             person.getGender() == null){
             System.out.println("1 or more required elements of person object are null - will not insert into database.\n");
             return;
+        } else {
+            System.out.println("None of required elements are null - continuing\n");
         }
 
         try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
@@ -39,7 +41,7 @@ public class PersonDAO extends BaseDAO{
             prepStmt.setString(7,person.getMotherID());
             prepStmt.setString(8,person.getSpouseID());
 
-            prepStmt.executeQuery();
+            prepStmt.executeUpdate();
         } catch (SQLException ex){
             System.out.println(ex.getMessage());
             throw new DataAccessException("Couldn't prepare statement, set strings, or execute query for insert person.\n");
@@ -55,9 +57,9 @@ public class PersonDAO extends BaseDAO{
     public Person find(String ID) throws DataAccessException {
         String sql = "SELECT * FROM Person WHERE personID = ?";
         try (PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
-            prepStmt.setString(1,ID);
+            prepStmt.setString(1, ID);
             ResultSet rs = prepStmt.executeQuery();
-            if(rs.first()){
+            if(rs.next()){
                 return new Person(
                         rs.getString("personID"),
                         rs.getString("associatedUsername"),
@@ -144,7 +146,7 @@ public class PersonDAO extends BaseDAO{
     public void clear() throws DataAccessException{
         String sql = "DELETE FROM Person";
         try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
-            prepStmt.executeQuery();
+            prepStmt.executeUpdate();
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
             throw new DataAccessException("Couldn't prepare statement or clear person table data.\n");

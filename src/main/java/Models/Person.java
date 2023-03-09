@@ -1,5 +1,7 @@
 package Models;
 
+import java.util.Objects;
+
 public class Person {
     /**
      * generated ID that has been assigned to Person
@@ -56,17 +58,6 @@ public class Person {
         this.motherID = motherID;
         this.spouseID = spouseID;
     }
-
-
-
-
-
-
-
-
-
-
-
 
     public String getPersonID() {
         return personID;
@@ -130,5 +121,13 @@ public class Person {
 
     public void setSpouseID(String spouseID) {
         this.spouseID = spouseID;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return Objects.equals(personID, person.personID) && Objects.equals(associatedUsername, person.associatedUsername) && Objects.equals(firstName, person.firstName) && Objects.equals(lastName, person.lastName) && Objects.equals(gender, person.gender) && Objects.equals(fatherID, person.fatherID) && Objects.equals(motherID, person.motherID) && Objects.equals(spouseID, person.spouseID);
     }
 }

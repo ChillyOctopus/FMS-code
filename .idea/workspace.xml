@@ -4,16 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="SQLITE + server stuff.">
+    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Got tests working - turns out a base DAO isn't a bad idea if you are working on a massive project and can generalize out a lot of objects, but it isn't worth it for a smaller project like this. Also changed create table statements.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/createTableStatements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/createTableStatements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/BaseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/BaseDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/EventDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/EventDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/PersonDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DAOs/PersonDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DAOs/PersonDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/BaseDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/BaseDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DAOs/EventDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/EventDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DAOs/PersonDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/PersonDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/DAOs/PersonDAOTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DAOs/PersonDAOTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,14 +104,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EventDAOTest">
-    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Server" />
-      <module name="FamilyMapServerStudent" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.PersonDAOTest">
     <configuration name="EventDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FamilyMapServerStudent" />
       <extension name="coverage">
@@ -120,22 +116,6 @@
       <option name="PACKAGE_NAME" value="DAOs" />
       <option name="MAIN_CLASS_NAME" value="DAOs.EventDAOTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EventDAOTest.insertFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FamilyMapServerStudent" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="DAOs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="DAOs" />
-      <option name="MAIN_CLASS_NAME" value="DAOs.EventDAOTest" />
-      <option name="METHOD_NAME" value="insertFail" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -156,17 +136,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServerTest.testValidNewRegister" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PersonDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FamilyMapServerStudent" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="passoff.*" />
+          <option name="PATTERN" value="DAOs.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="passoff" />
-      <option name="MAIN_CLASS_NAME" value="passoff.ServerTest" />
-      <option name="METHOD_NAME" value="testValidNewRegister(org.junit.jupiter.api.TestInfo)" />
+      <option name="PACKAGE_NAME" value="DAOs" />
+      <option name="MAIN_CLASS_NAME" value="DAOs.PersonDAOTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonDAOTest.insertFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FamilyMapServerStudent" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DAOs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DAOs" />
+      <option name="MAIN_CLASS_NAME" value="DAOs.PersonDAOTest" />
+      <option name="METHOD_NAME" value="insertFail" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonDAOTest.insertPass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FamilyMapServerStudent" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DAOs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DAOs" />
+      <option name="MAIN_CLASS_NAME" value="DAOs.PersonDAOTest" />
+      <option name="METHOD_NAME" value="insertPass" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -174,11 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PersonDAOTest" />
+        <item itemvalue="JUnit.PersonDAOTest.insertPass" />
+        <item itemvalue="JUnit.PersonDAOTest.insertFail" />
         <item itemvalue="JUnit.EventDAOTest" />
         <item itemvalue="JUnit.EventDAOTest.insertPass" />
-        <item itemvalue="JUnit.EventDAOTest.insertFail" />
-        <item itemvalue="Application.Server" />
-        <item itemvalue="JUnit.ServerTest.testValidNewRegister" />
       </list>
     </recent_temporary>
   </component>
@@ -373,7 +384,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678320266660</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Got tests working - turns out a base DAO isn't a bad idea if you are working on a massive project and can generalize out a lot of objects, but it isn't worth it for a smaller project like this. Also changed create table statements.">
+      <created>1678324713005</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1678324713005</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Got tests working - turns out a base DAO isn't a bad idea if you are working on a massive project and can generalize out a lot of objects, but it isn't worth it for a smaller project like this. Also changed create table statements.">
+      <created>1678324725662</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1678324725662</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -434,7 +459,9 @@
     <MESSAGE value="PersonDAO finished." />
     <MESSAGE value="Modified DAOs further." />
     <MESSAGE value="SQLITE + server stuff." />
-    <option name="LAST_COMMIT_MESSAGE" value="SQLITE + server stuff." />
+    <MESSAGE value="Got tests working - turns out a base DAO isn't a bad idea if you are working on a massive project and can generalize out a lot of objects, but it isn't worth it for a smaller project like this." />
+    <MESSAGE value="Got tests working - turns out a base DAO isn't a bad idea if you are working on a massive project and can generalize out a lot of objects, but it isn't worth it for a smaller project like this. Also changed create table statements." />
+    <option name="LAST_COMMIT_MESSAGE" value="Got tests working - turns out a base DAO isn't a bad idea if you are working on a massive project and can generalize out a lot of objects, but it isn't worth it for a smaller project like this. Also changed create table statements." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -447,11 +474,6 @@
           <properties class="org.sqlite.SQLiteException" package="org.sqlite" />
           <option name="timeStamp" value="9" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/DAOs/EventDAOTest.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
