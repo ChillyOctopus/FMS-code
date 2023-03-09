@@ -26,9 +26,11 @@ public class UserDAOTest {
     }
 
     @AfterEach
+    /*
     public void teardown() throws DataAccessException{
         uDao.DB.closeConnection(false);
     }
+    */
 
     @Test
     public void insertPass() throws DataAccessException{

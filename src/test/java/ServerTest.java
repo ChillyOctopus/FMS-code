@@ -6,6 +6,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
+//NOTE: BE SURE TO HAVE THE SERVER RUNNING BEFORE YOU RUN THE TESTS
 public class ServerTest {
     HttpClient hc;
 
@@ -27,6 +28,7 @@ public class ServerTest {
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("http://localhost:8080/user/register"))
                 .POST(HttpRequest.BodyPublishers.ofString(postReq))
+                .headers("Content-Type", "application/x-www-form-urlencoded")
                 .build();
 
         hc.sendAsync(request, HttpResponse.BodyHandlers.ofString())

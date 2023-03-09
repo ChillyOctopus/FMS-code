@@ -28,7 +28,7 @@ public class UserDAO extends BaseDAO{
            user.getLastName() == null ||
            user.getGender() == null ||
            user.getPersonID() == null){
-
+            DB.closeConnection(false);
             throw new DataAccessException("1 or more elements of user object are null - will not insert into database.\n");
         }
         try (PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
@@ -43,8 +43,11 @@ public class UserDAO extends BaseDAO{
             prepStmt.executeUpdate();
         } catch (SQLException ex){
             System.out.println(ex.getMessage());
+            DB.closeConnection(false);
             throw new DataAccessException("Failed to insert User.\n");
         }
+
+        DB.closeConnection(true);
     }
 
     /**
@@ -60,6 +63,7 @@ public class UserDAO extends BaseDAO{
             ResultSet rs = prepStmt.executeQuery();
 
             if(rs.next()){
+                DB.closeConnection(false);
                 return new User(
                     rs.getString("username"),
                     rs.getString("password"),
@@ -69,11 +73,13 @@ public class UserDAO extends BaseDAO{
                     rs.getString("gender"),
                     rs.getString("personID"));
             } else {
+                DB.closeConnection(false);
                 throw new DataAccessException("Found no user with matching ID.");
             }
 
         } catch(SQLException ex){
             System.out.println(ex.getMessage());
+            DB.closeConnection(false);
             throw new DataAccessException("Couldn't translate result set to user object\n");
         }
     }
@@ -108,10 +114,12 @@ public class UserDAO extends BaseDAO{
             }
 
         } catch (SQLException ex){
+            DB.closeConnection(false);
             System.out.println(ex.getMessage());
             throw new DataAccessException("Either couldn't prepare statement or translate data to objects.");
         }
 
+        DB.closeConnection(false);
         return users;
 
     }
@@ -129,6 +137,7 @@ public class UserDAO extends BaseDAO{
             DB.closeConnection(true);
 
         } catch (SQLException ex){
+            DB.closeConnection(false);
             System.out.println(ex.getMessage());
             throw new DataAccessException("Couldn't prepare statement or execute delete.");
         }
@@ -143,9 +152,11 @@ public class UserDAO extends BaseDAO{
         try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
             prepStmt.executeUpdate();
         } catch (SQLException ex) {
+            DB.closeConnection(false);
             System.out.println(ex.getMessage());
             throw new DataAccessException("Couldn't prepare statement or clear user table data.\n");
         }
+        DB.closeConnection(true);
     }
 
 }

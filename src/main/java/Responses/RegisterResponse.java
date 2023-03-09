@@ -31,4 +31,8 @@ public class RegisterResponse extends BaseResponse{
         this.username = username;
         this.personID = personID;
     }
+
+    public RegisterResponse(String message, boolean success) {
+        super(message,success);
+    }
 }
