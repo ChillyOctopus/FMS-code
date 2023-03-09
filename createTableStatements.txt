@@ -10,7 +10,8 @@ CREATE TABLE User(
 	firstName text NOT NULL, 
 	lastName text NOT NULL, 
 	gender text NOT NULL, 
-	personID text NOT NULL
+	personID text NOT NULL,
+	PRIMARY KEY(personID)
 );
 
 CREATE TABLE Person(
@@ -21,7 +22,8 @@ CREATE TABLE Person(
 	gender text NOT NULL, 
 	fatherID text, 
 	motherID text, 
-	spouseID text
+	spouseID text,
+	PRIMARY KEY(personID)
 );
 
 CREATE TABLE Event(
@@ -33,7 +35,8 @@ CREATE TABLE Event(
 	country text NOT NULL, 
 	city text NOT NULL, 
 	eventType text NOT NULL, 
-	year integer NOT NULL
+	year integer NOT NULL,
+	PRIMARY KEY(eventID)
 );
 
 CREATE TABLE Authtoken(

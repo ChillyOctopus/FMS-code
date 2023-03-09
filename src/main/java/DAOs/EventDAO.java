@@ -14,7 +14,7 @@ public class EventDAO extends BaseDAO{
     public void insert(Event event) throws DataAccessException {
         //We can structure our string to be similar to a sql command, but if we insert question
         //marks we can change them later with help from the statement
-        String sql = "INSERT INTO Events (EventID, AssociatedUsername, PersonID, Latitude, Longitude, " +
+        String sql = "INSERT INTO Event (EventID, AssociatedUsername, PersonID, Latitude, Longitude, " +
                 "Country, City, EventType, Year) VALUES(?,?,?,?,?,?,?,?,?)";
         try (PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)) {
             //Using the statements built-in set(type) functions we can pick the question mark we want
@@ -31,8 +31,8 @@ public class EventDAO extends BaseDAO{
             prepStmt.setInt(9, event.getYear());
 
             prepStmt.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
             throw new DataAccessException("Error encountered while inserting an event into the database");
         }
     }
@@ -68,7 +68,7 @@ public class EventDAO extends BaseDAO{
      * @throws DataAccessException
      */
     public void clear() throws DataAccessException {
-        String sql = "DELETE FROM Events";
+        String sql = "DELETE FROM Event";
         try (PreparedStatement stmt = DB.getConnection().prepareStatement(sql)) {
             stmt.executeUpdate();
         } catch (SQLException e) {

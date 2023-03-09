@@ -1,9 +1,7 @@
 package DAOs;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.io.File;
+import java.sql.*;
 
 public class Database {
     private Connection conn;
@@ -19,7 +17,8 @@ public class Database {
         try {
             // The Structure for this Connection is driver:language:path
             // The path assumes you start in the root of your project unless given a full file path
-            final String CONNECTION_URL = "jdbc:sqlite:/home/adam/jacob/jacob_java/FMS.db";
+            String dbName = "/home/adam/jacob/DB/FMS.db";
+            String CONNECTION_URL = "jdbc:sqlite:" + dbName;
 
             // Open a database connection to the file given in the path
             conn = DriverManager.getConnection(CONNECTION_URL);

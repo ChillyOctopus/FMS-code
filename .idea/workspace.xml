@@ -4,35 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="PersonDAO finished.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Server.java" afterDir="false" />
+    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Modified DAOs further.">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/xerial_sqlite_jdbc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/DAOs/EventDAOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/DAOs/PersonDAOTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/BaseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/BaseDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/Database.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/EventDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/EventDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/PersonDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HelloWorld.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/AuthtokenDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/AuthtokenDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DAOs/EventDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/EventDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/PersonDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/PersonDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/abstractDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DB/AuthtokenDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DB/EventDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DB/PersonDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DB/UserDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/HelloWorld.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Authtoken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Authtoken.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Models/Event.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Event.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Req_Res/ErrorResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/Clear.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/Clear.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/EventTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/FamilyTree.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/Fill.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/Fill.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/Load.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/Load.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/Register.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/SingleEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/SingleEvent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/SinglePerson.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/SinglePerson.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -75,32 +58,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/adam/jacob/jacob_java/FamilyMapServerStudent&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.30804598&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "/home/adam/jacob/jacob_java/FamilyMapServerStudent",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2724138",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/Services" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/DB" />
       <recent name="$PROJECT_DIR$/src/main/java" />
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="Results" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="DAOs" />
+      <recent name="Tests" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Requests" />
@@ -108,7 +102,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Server">
+  <component name="RunManager" selected="JUnit.EventDAOTest">
     <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Server" />
       <module name="FamilyMapServerStudent" />
@@ -125,6 +119,37 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EventDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FamilyMapServerStudent" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DAOs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DAOs" />
+      <option name="MAIN_CLASS_NAME" value="DAOs.EventDAOTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EventDAOTest.insertFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FamilyMapServerStudent" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DAOs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DAOs" />
+      <option name="MAIN_CLASS_NAME" value="DAOs.EventDAOTest" />
+      <option name="METHOD_NAME" value="insertFail" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -147,6 +172,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EventDAOTest" />
+        <item itemvalue="JUnit.EventDAOTest.insertFail" />
         <item itemvalue="Application.Server" />
         <item itemvalue="JUnit.ServerTest.testValidNewRegister" />
         <item itemvalue="Application.UserDAO" />
@@ -330,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678305228774</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Modified DAOs further.">
+      <created>1678314080800</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1678314080800</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -389,6 +423,26 @@
     <MESSAGE value="Modified table statements, and UserDAO implementations." />
     <MESSAGE value="UserDAO finished." />
     <MESSAGE value="PersonDAO finished." />
-    <option name="LAST_COMMIT_MESSAGE" value="PersonDAO finished." />
+    <MESSAGE value="Modified DAOs further." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified DAOs further." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLException" package="java.sql" />
+          <option name="timeStamp" value="8" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.sqlite.SQLiteException" package="org.sqlite" />
+          <option name="timeStamp" value="9" />
+        </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/DAOs/EventDAO.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

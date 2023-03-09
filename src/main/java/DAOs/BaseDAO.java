@@ -4,7 +4,7 @@ import java.io.File;
 import java.sql.*;
 
 public class BaseDAO {
-    Database DB;
+    public Database DB;
 
     /**
      * abstracting out the DAO
@@ -28,12 +28,11 @@ public class BaseDAO {
      * @throws DataAccessException
      */
     public ResultSet getRecord(String tableName, String pkey, String pKeyVal) throws DataAccessException {
-        String sql = "SELECT * FROM ? WHERE ? = ?";
+        String sql = "SELECT * FROM " +tableName+ " WHERE ? = ?";
         try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)) {
 
-            prepStmt.setString(1, tableName);
-            prepStmt.setString(2, pkey);
-            prepStmt.setString(3, pKeyVal);
+            prepStmt.setString(1, pkey);
+            prepStmt.setString(2, pKeyVal);
 
             return prepStmt.executeQuery();
 
