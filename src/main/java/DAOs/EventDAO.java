@@ -6,6 +6,7 @@ import Models.Event;
  * In-between for Event models and database.
  */
 public class EventDAO extends BaseDAO{
+
     /**
      * Inserting an Event object into our database.
      * @param event The event object we are inserting in the database.
@@ -32,7 +33,7 @@ public class EventDAO extends BaseDAO{
 
             prepStmt.executeUpdate();
         } catch (SQLException ex) {
-            ex.printStackTrace();
+            System.out.println(ex.getMessage());
             throw new DataAccessException("Error encountered while inserting an event into the database");
         }
     }
