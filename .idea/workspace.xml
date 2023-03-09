@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Gave model classes &quot;Equals&quot; function, modified DAOs further, made some test cases.">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Authtoken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Authtoken.java" afterDir="false" />
+    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Updated Authtoken, still have work to do.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/DAOs/UserDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/PersonDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DAOs/PersonDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DAOs/PersonDAOTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/PersonDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/PersonDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/Authtoken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Authtoken.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/DAOs/PersonDAOTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DAOs/PersonDAOTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -93,34 +104,10 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PersonDAOTest">
-    <configuration name="EventDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.UserDAOTest">
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Server" />
       <module name="FamilyMapServerStudent" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="DAOs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="DAOs" />
-      <option name="MAIN_CLASS_NAME" value="DAOs.EventDAOTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EventDAOTest.insertPass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="FamilyMapServerStudent" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="DAOs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="DAOs" />
-      <option name="MAIN_CLASS_NAME" value="DAOs.EventDAOTest" />
-      <option name="METHOD_NAME" value="insertPass" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -172,13 +159,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FamilyMapServerStudent" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DAOs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DAOs" />
+      <option name="MAIN_CLASS_NAME" value="DAOs.UserDAOTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserDAOTest" />
         <item itemvalue="JUnit.PersonDAOTest" />
+        <item itemvalue="Application.Server" />
         <item itemvalue="JUnit.PersonDAOTest.insertPass" />
         <item itemvalue="JUnit.PersonDAOTest.insertFail" />
-        <item itemvalue="JUnit.EventDAOTest" />
-        <item itemvalue="JUnit.EventDAOTest.insertPass" />
       </list>
     </recent_temporary>
   </component>
@@ -394,7 +396,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678326476305</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Updated Authtoken, still have work to do.">
+      <created>1678328476183</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1678328476183</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -458,7 +467,8 @@
     <MESSAGE value="Got tests working - turns out a base DAO isn't a bad idea if you are working on a massive project and can generalize out a lot of objects, but it isn't worth it for a smaller project like this." />
     <MESSAGE value="Got tests working - turns out a base DAO isn't a bad idea if you are working on a massive project and can generalize out a lot of objects, but it isn't worth it for a smaller project like this. Also changed create table statements." />
     <MESSAGE value="Gave model classes &quot;Equals&quot; function, modified DAOs further, made some test cases." />
-    <option name="LAST_COMMIT_MESSAGE" value="Gave model classes &quot;Equals&quot; function, modified DAOs further, made some test cases." />
+    <MESSAGE value="Updated Authtoken, still have work to do." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Authtoken, still have work to do." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

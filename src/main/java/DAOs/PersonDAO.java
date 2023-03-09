@@ -25,10 +25,10 @@ public class PersonDAO extends BaseDAO{
             person.getFirstName() == null ||
             person.getLastName() == null ||
             person.getGender() == null){
-            System.out.println("1 or more required elements of person object are null - will not insert into database.\n");
+            //System.out.println("1 or more required elements of person object are null - will not insert into database.\n");
             return;
         } else {
-            System.out.println("None of required elements are null - continuing\n");
+            //System.out.println("None of required elements are null - continuing\n");
         }
 
         try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
@@ -70,15 +70,14 @@ public class PersonDAO extends BaseDAO{
                         rs.getString("motherID"),
                         rs.getString("spouseID"));
             } else {
-                System.out.println("Result set was empty\n");
+                //System.out.println("Result set was empty\n");
+                throw new DataAccessException("Found no Person with matching ID.");
             }
 
         } catch(SQLException ex){
             System.out.println(ex.getMessage());
             throw new DataAccessException("Couldn't translate result set to person object\n");
         }
-
-        return null;
     }
 
     /**
@@ -89,12 +88,12 @@ public class PersonDAO extends BaseDAO{
      */
     public LinkedList<Person> findAll(String assocUserID) throws DataAccessException{
         LinkedList<Person> persons = new LinkedList<>();
-        String sql = "SELECT * FROM Person WHERE userID = ?";
+        String sql = "SELECT * FROM Person WHERE associatedUsername = ?";
 
         try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
             prepStmt.setString(1,assocUserID);
             ResultSet rs = prepStmt.executeQuery();
-            if(rs.first()) {
+            if(rs.next()) {
                 do {
                     Person p = new Person(
                             rs.getString(1),
@@ -110,7 +109,7 @@ public class PersonDAO extends BaseDAO{
 
                 } while (rs.next());
             } else {
-                System.out.println("Result set was empty.\n");
+                System.out.println("No Persons found.\n");
             }
 
         } catch (SQLException ex){

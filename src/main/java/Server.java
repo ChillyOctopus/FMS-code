@@ -9,8 +9,9 @@ public class Server {
     Server(){
         try {
             HttpServer server = HttpServer.create();
-            server.bind(new InetSocketAddress(8080), 0);
+            server.bind(new InetSocketAddress(8080),0);
             server.start();
+
         } catch (IOException ex){
             System.out.println(ex.getMessage());
             System.out.println("Couldn't create server.\n");

@@ -6,11 +6,14 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.sqlite.core.DB;
 
+import java.util.LinkedList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 //We will use this to test that our insert method is working and failing in the right ways
 public class PersonDAOTest {
     private Person bestPerson;
+    private Person okPerson;
     private PersonDAO pDao;
 
     @BeforeEach
@@ -18,6 +21,8 @@ public class PersonDAOTest {
         // and a new event with random data
         bestPerson = new Person("h89t7a", "Jacob", "John",
                 "Doe", "m", null,null,null);
+        okPerson = new Person("gsd36755y", "Jacob", "Jason",
+                "A", "m","ad0f6", "hdfa057","1v1bmn");
 
         pDao = new PersonDAO();
         //Let's clear the database as well so any lingering data doesn't affect our tests
@@ -62,5 +67,36 @@ public class PersonDAOTest {
         // the "()->", and the assertThrows assertion expects the code that ran to throw an
         // instance of the class in the first parameter, which in this case is a DataAccessException.
         assertThrows(DataAccessException.class, () -> pDao.insert(bestPerson));
+    }
+
+    @Test
+    public void findPass() throws DataAccessException{
+        pDao.insert(bestPerson);
+        pDao.insert(okPerson);
+        assertEquals(pDao.find(bestPerson.getPersonID()), bestPerson);
+        assertEquals(pDao.find(okPerson.getPersonID()), okPerson);
+        assertNotEquals(pDao.find(bestPerson.getPersonID()), okPerson);
+    }
+
+    @Test
+    public void findFail() throws DataAccessException{
+        assertThrows(DataAccessException.class, () -> pDao.find("adgfbz6789d79zd7fzdh679"));
+        assertThrows(DataAccessException.class, () -> pDao.find(bestPerson.getPersonID()));
+
+        assertThrows(DataAccessException.class, () -> pDao.find(""));
+        assertThrows(DataAccessException.class, () -> pDao.find(null));
+
+        pDao.insert(bestPerson);
+        assertThrows(DataAccessException.class, () -> pDao.find(okPerson.getPersonID()));
+    }
+
+    @Test
+    public void clear() throws DataAccessException{
+        pDao.insert(bestPerson);
+        pDao.insert(okPerson);
+        pDao.clear();
+        assertThrows(DataAccessException.class, ()->pDao.find(bestPerson.getPersonID()));
+        LinkedList<Person> l = pDao.findAll("Jacob");
+        assertEquals(0, l.size());
     }
 }

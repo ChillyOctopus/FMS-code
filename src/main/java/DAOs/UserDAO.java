@@ -12,13 +12,14 @@ import java.util.LinkedList;
  * In-between for User models and database.
  */
 public class UserDAO extends BaseDAO{
+
     /**
      * Inserting a User object into the database.
      * @param user the object we are inserting.
      * @throws DataAccessException
      */
     public void insert(@NotNull User user) throws DataAccessException {
-        String sql = "INSERT INTO User VALUES ? ? ? ? ? ? ?";
+        String sql = "INSERT INTO User (username, password, email, firstName, lastName, gender, personID) VALUES (?,?,?,?,?,?,?)";
         //First check if anything the user has is null, needs to be a full object
         if(user.getUsername() == null ||
            user.getPassword() == null ||
@@ -28,11 +29,9 @@ public class UserDAO extends BaseDAO{
            user.getGender() == null ||
            user.getPersonID() == null){
 
-            System.out.println("1 or more elements of user object are null - will not insert into database.\n");
-            return;
+            throw new DataAccessException("1 or more elements of user object are null - will not insert into database.\n");
         }
-        try (PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql))
-        {
+        try (PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
             prepStmt.setString(1,user.getUsername());
             prepStmt.setString(2,user.getPassword());
             prepStmt.setString(3,user.getEmail());
@@ -41,7 +40,7 @@ public class UserDAO extends BaseDAO{
             prepStmt.setString(6,user.getGender());
             prepStmt.setString(7,user.getPersonID());
 
-            prepStmt.executeQuery();
+            prepStmt.executeUpdate();
         } catch (SQLException ex){
             System.out.println(ex.getMessage());
             throw new DataAccessException("Failed to insert User.\n");
@@ -60,7 +59,7 @@ public class UserDAO extends BaseDAO{
             prepStmt.setString(1,ID);
             ResultSet rs = prepStmt.executeQuery();
 
-            if(rs.first()){
+            if(rs.next()){
                 return new User(
                     rs.getString("username"),
                     rs.getString("password"),
@@ -70,15 +69,13 @@ public class UserDAO extends BaseDAO{
                     rs.getString("gender"),
                     rs.getString("personID"));
             } else {
-                System.out.println("Result set was empty\n");
+                throw new DataAccessException("Found no user with matching ID.");
             }
 
         } catch(SQLException ex){
             System.out.println(ex.getMessage());
             throw new DataAccessException("Couldn't translate result set to user object\n");
         }
-
-        return null;
     }
 
     /**
@@ -92,7 +89,7 @@ public class UserDAO extends BaseDAO{
 
         try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
             ResultSet rs = prepStmt.executeQuery();
-            if(rs.first()) {
+            if(rs.next()) {
                 do {
                     User u = new User(
                             rs.getString(1),
@@ -107,7 +104,7 @@ public class UserDAO extends BaseDAO{
 
                 } while (rs.next());
             } else {
-                System.out.println("Result set was empty.\n");
+                System.out.println("No Users found.\n");
             }
 
         } catch (SQLException ex){
@@ -128,7 +125,7 @@ public class UserDAO extends BaseDAO{
         String sql = "DELETE FROM User WHERE username = ?";
         try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
             prepStmt.setString(1,username);
-            prepStmt.executeQuery();
+            prepStmt.executeUpdate();
             DB.closeConnection(true);
 
         } catch (SQLException ex){
@@ -144,7 +141,7 @@ public class UserDAO extends BaseDAO{
     public void clear() throws DataAccessException{
         String sql = "DELETE FROM User";
         try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
-            prepStmt.executeQuery();
+            prepStmt.executeUpdate();
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
             throw new DataAccessException("Couldn't prepare statement or clear user table data.\n");
