@@ -4,19 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Ran Register Handler some more, fixed client up.">
+    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Got FileHandler up and running nicely.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/createTableStatements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/createTableStatements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/AuthtokenDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/AuthtokenDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/EventDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/EventDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Handlers/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Handlers/FileHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/UserDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Handlers/RegisterHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Handlers/RegisterHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/Register.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Authtoken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Authtoken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Clear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Clear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Handlers/FileHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Handlers/FileHandler.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -450,7 +446,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678471941221</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Got FileHandler up and running nicely.">
+      <created>1678478075788</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1678478075788</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Got FileHandler up and running nicely.">
+      <created>1678478086597</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1678478086597</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -492,7 +502,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Further testing" />
     <MESSAGE value="Finished the javadoc for DAO classes." />
     <MESSAGE value="Removed &quot;DB&quot; classes (What were they doin anyway?)" />
     <MESSAGE value="Updated javadoc for DAOs and Model classes" />
@@ -517,7 +526,8 @@
     <MESSAGE value="Pretty much ran up and down with Register functionality" />
     <MESSAGE value="Fixed duplicate usernames and modified further up and down." />
     <MESSAGE value="Ran Register Handler some more, fixed client up." />
-    <option name="LAST_COMMIT_MESSAGE" value="Ran Register Handler some more, fixed client up." />
+    <MESSAGE value="Got FileHandler up and running nicely." />
+    <option name="LAST_COMMIT_MESSAGE" value="Got FileHandler up and running nicely." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

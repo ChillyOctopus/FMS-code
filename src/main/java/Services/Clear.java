@@ -1,6 +1,12 @@
 package Services;
 
+import DAOs.*;
+import Models.Authtoken;
+import Models.Person;
 import Responses.ClearResponse;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Implements clear
@@ -11,9 +17,22 @@ public class Clear {
      * @return the cle.Resp. object
      */
     public ClearResponse clear(){
-        ClearResponse response = null;
-        return response;
+        try {
+            UserDAO udao = new UserDAO();
+            udao.clear();
+            PersonDAO pdao = new PersonDAO();
+            pdao.clear();
+            AuthtokenDAO adao = new AuthtokenDAO();
+            adao.clear();
+            EventDAO edao = new EventDAO();
+            edao.clear();
+        }catch(DataAccessException ex){
+            return new ClearResponse(ex.getMessage(), false);
+        }
+        return new ClearResponse("Successfully cleared.", true);
     }
+    files.get.deleteAll();
+    
 
     /*
     1. Delete ALL data from database.

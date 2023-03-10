@@ -42,7 +42,7 @@ public class Authtoken {
         StringBuilder result = new StringBuilder();
 
         int count = random.nextInt(9);
-        count += 8;
+        count += 12;
 
         for(int i = 0; i < count; i++){
             result.append(TOKENCHARS.charAt(random.nextInt(TOKENCHARS.length())));

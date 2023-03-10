@@ -1,20 +1,10 @@
 package Handlers;
 
-import Requests.RegisterRequest;
-import Responses.RegisterResponse;
-import Services.Register;
-import com.google.gson.Gson;
-import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
-import java.awt.font.TextHitInfo;
 import java.io.*;
-import java.net.HttpURLConnection;
 import java.nio.file.Files;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
 
 public class FileHandler implements HttpHandler {
 
@@ -30,7 +20,7 @@ public class FileHandler implements HttpHandler {
                 File f;
 
                 //return index.html case
-                if(urlPath.equals("/") || urlPath == null){
+                if(urlPath.equals("/")){
                     f = new File(dir + "/index.html");
                 } else {
                     f = new File(dir + urlPath);

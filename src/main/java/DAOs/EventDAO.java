@@ -32,8 +32,10 @@ public class EventDAO extends BaseDAO{
             prepStmt.setInt(9, event.getYear());
 
             prepStmt.executeUpdate();
+            DB.closeConnection(true);
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
+            DB.closeConnection(false);
             throw new DataAccessException("Error encountered while inserting an event into the database");
         }
     }
@@ -55,12 +57,15 @@ public class EventDAO extends BaseDAO{
                         rs.getString("personID"), rs.getFloat("latitude"), rs.getFloat("longitude"),
                         rs.getString("country"), rs.getString("city"), rs.getString("eventType"),
                         rs.getInt("year"));
+                DB.closeConnection(false);
                 return event;
             } else {
+                DB.closeConnection(false);
                 return null;
             }
         } catch (SQLException ex){
             System.out.println(ex.getMessage());
+            DB.closeConnection(false);
             throw new DataAccessException("Couldn't locate single event.");
         }
     }
@@ -75,7 +80,9 @@ public class EventDAO extends BaseDAO{
             stmt.executeUpdate();
         } catch (SQLException ex) {
             ex.printStackTrace();
+            DB.closeConnection(true);
             throw new DataAccessException("Error encountered while clearing the event table");
         }
+        DB.closeConnection(true);
     }
 }
