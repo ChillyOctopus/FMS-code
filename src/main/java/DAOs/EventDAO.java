@@ -80,7 +80,7 @@ public class EventDAO extends BaseDAO{
             stmt.executeUpdate();
         } catch (SQLException ex) {
             ex.printStackTrace();
-            DB.closeConnection(true);
+            DB.closeConnection(false);
             throw new DataAccessException("Error encountered while clearing the event table");
         }
         DB.closeConnection(true);

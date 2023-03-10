@@ -18,17 +18,19 @@ public class AuthtokenDAO extends BaseDAO {
      * @throws DataAccessException
      */
     public void insert(Authtoken token) throws DataAccessException{
-        String sql = "INSERT INTO Authtoken (authtoken, username, timestamp) VALUES (?,?,?)";
+        String sql = "INSERT INTO Authtoken (authtoken, username) VALUES (?,?)";
+        System.out.println(token.getAuthtoken());
+        System.out.println(token.getUsername());
+
         try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
             prepStmt.setString(1,token.getAuthtoken());
             prepStmt.setString(2,token.getUsername());
-            prepStmt.setString(3,token.getTimeStamp());
-
+            System.out.println(prepStmt.toString());
             prepStmt.executeUpdate();
         }catch(SQLException ex){
             ex.getMessage();
             DB.closeConnection(false);
-            throw new DataAccessException("Couldn't insert Authtoken.");
+            throw new DataAccessException("Unable to insert Authtoken.");
         }
         DB.closeConnection(true);
     }

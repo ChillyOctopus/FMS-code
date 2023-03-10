@@ -1,11 +1,13 @@
 package Services;
 
 import DAOs.DataAccessException;
+import Models.Authtoken;
 import Requests.RegisterRequest;
 import Responses.RegisterResponse;
 
 import Models.User;
 import DAOs.UserDAO;
+import DAOs.AuthtokenDAO;
 
 import java.util.Random;
 
@@ -30,19 +32,23 @@ public class Register {
                 request.getGender(),
                 Userid);
 
-        UserDAO dao = new UserDAO();
-
+        String authtoken = generateUniqueString();
 
         try {
-            dao.insert(u);
+            UserDAO udao = new UserDAO();
+            udao.insert(u);
+
+            Authtoken token = new Authtoken(authtoken,u.getUsername());
+            System.out.println("Authtoken:"+token.getAuthtoken());
+            System.out.println("Username:"+token.getUsername());
+            AuthtokenDAO adao = new AuthtokenDAO();
+            adao.insert(token);
+
         }catch(DataAccessException ex){
-            RegisterResponse response = new RegisterResponse(ex.getMessage(), false);
-            return response;
+            return new RegisterResponse(ex.getMessage(), false);
         }
 
-        String authtoken = generateUniqueString();
-        RegisterResponse response = new RegisterResponse(authtoken, u.getUsername(), u.getPersonID(), null, true);
-        return response;
+        return new RegisterResponse(authtoken, u.getUsername(), u.getPersonID(), null, true);
     }
 
     /**

@@ -13,24 +13,18 @@ public class Authtoken {
      */
     private String username;
     /**
-     * the time token was created
-     */
-    private String timeStamp;
-    /**
      * used for authtoken generation
      */
-    private static final String TOKENCHARS = "01234567890`~!@#$%^&><AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+    private static final String TOKENCHARS = "01234567890AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
 
     /**
      * Constructor
      * @param authtoken the actual authtoken
      * @param username associated username
-     * @param timeStamp the timestamp it was taken.
      */
-    public Authtoken(String authtoken, String username, String timeStamp) {
+    public Authtoken(String authtoken, String username) {
         this.authtoken = authtoken;
         this.username = username;
-        this.timeStamp = timeStamp;
     }
 
     /**
@@ -72,19 +66,11 @@ public class Authtoken {
         this.username = username;
     }
 
-    public String getTimeStamp() {
-        return timeStamp;
-    }
-
-    public void setTimeStamp(String timeStamp) {
-        this.timeStamp = timeStamp;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Authtoken authtoken1 = (Authtoken) o;
-        return Objects.equals(authtoken, authtoken1.authtoken) && Objects.equals(username, authtoken1.username) && Objects.equals(timeStamp, authtoken1.timeStamp);
+        return Objects.equals(authtoken, authtoken1.authtoken) && Objects.equals(username, authtoken1.username);
     }
 }

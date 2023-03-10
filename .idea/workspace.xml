@@ -5,14 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Got FileHandler up and running nicely.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Handlers/ClearHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/createTableStatements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/createTableStatements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/AuthtokenDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/AuthtokenDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/EventDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/EventDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Handlers/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Handlers/FileHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/PersonDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Models/Authtoken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Authtoken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/Clear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Clear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Handlers/FileHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Handlers/FileHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/AuthtokenDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/AuthtokenDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/EventDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/EventDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/PersonDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/PersonDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Models/Authtoken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Models/Authtoken.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/Clear.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/Clear.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/Register.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,8 +165,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Server" />
         <item itemvalue="Application.Client" />
+        <item itemvalue="Application.Server" />
         <item itemvalue="JUnit.ServerTest" />
         <item itemvalue="JUnit.UserDAOTest" />
         <item itemvalue="JUnit.EventDAOTest" />
@@ -460,7 +469,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678478086597</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Got FileHandler up and running nicely.">
+      <created>1678482979419</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1678482979419</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -539,6 +555,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="org.sqlite.SQLiteException" package="org.sqlite" />
           <option name="timeStamp" value="9" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.io.IOException" package="java.io" />
+          <option name="timeStamp" value="13" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>

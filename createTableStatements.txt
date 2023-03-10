@@ -41,6 +41,5 @@ CREATE TABLE Event(
 
 CREATE TABLE Authtoken(
 	authtoken text NOT NULL, 
-	username text NOT NULL,
-	timestamp text NOT NULL
+	username text NOT NULL
 );

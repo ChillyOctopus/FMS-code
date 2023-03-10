@@ -27,12 +27,11 @@ public class Clear {
             EventDAO edao = new EventDAO();
             edao.clear();
         }catch(DataAccessException ex){
-            return new ClearResponse(ex.getMessage(), false);
+            return new ClearResponse("Error: "+ex.getMessage(), false);
         }
-        return new ClearResponse("Successfully cleared.", true);
+        return new ClearResponse("Clear succeeded", true);
     }
-    files.get.deleteAll();
-    
+
 
     /*
     1. Delete ALL data from database.

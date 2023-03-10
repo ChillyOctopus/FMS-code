@@ -148,8 +148,10 @@ public class PersonDAO extends BaseDAO{
         try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
             prepStmt.executeUpdate();
         } catch (SQLException ex) {
+            DB.closeConnection(false);
             System.out.println(ex.getMessage());
             throw new DataAccessException("Couldn't prepare statement or clear person table data.\n");
         }
+        DB.closeConnection(true);
     }
 }
