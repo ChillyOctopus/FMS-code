@@ -3,6 +3,8 @@ package Services;
 import Requests.LoginRequest;
 import Responses.LoginResponse;
 
+import java.util.Random;
+
 /**
  * Implements Login
  */
@@ -15,6 +17,29 @@ public class Login {
     public LoginResponse login(LoginRequest request){
         LoginResponse response = null;
         return response;
+    }
+
+    /**
+     * The charset we pull from to make the authtokens.
+     */
+    private static final String TOKENCHARS = "0123456789`~!@#$%^&><()-_=+|}]{[AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+
+    /**
+     * Generating our id's & authtokens
+     * @return the authtoken
+     */
+    private String generateUniqueString(){
+        Random random = new Random();
+        StringBuilder result = new StringBuilder();
+
+        int count = random.nextInt(9);
+        count += 12;
+
+        for(int i = 0; i < count; i++){
+            result.append(TOKENCHARS.charAt(random.nextInt(TOKENCHARS.length())));
+        }
+
+        return result.toString();
     }
 
     /*

@@ -56,8 +56,6 @@ public class RegisterHandler implements HttpHandler {
                 resBody.write(body.getBytes());
                 //close the output stream
                 resBody.close();
-                exchange.getResponseBody().close();
-
                 success = true;
 
             }
@@ -69,6 +67,9 @@ public class RegisterHandler implements HttpHandler {
             }
 
         } catch (IOException ex) {
+            //It is our fault, so we send an internal error
+            exchange.sendResponseHeaders(HttpURLConnection.HTTP_INTERNAL_ERROR,0);
+            exchange.getRequestBody().close();
             ex.printStackTrace();
             System.out.println("Issue in Register Handler...\n");
             System.out.println("Body: " + body);

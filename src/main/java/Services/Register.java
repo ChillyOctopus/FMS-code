@@ -65,8 +65,7 @@ public class Register {
             result.append(TOKENCHARS.charAt(random.nextInt(TOKENCHARS.length())));
         }
 
-        String token = result.toString();
-        return token;
+        return result.toString();
     }
 
     /*

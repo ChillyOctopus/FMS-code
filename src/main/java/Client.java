@@ -1,6 +1,8 @@
 
 import java.io.*;
 import java.net.*;
+import Models.*;
+import com.google.gson.Gson;
 
 /*
 	The Client class shows how to call a web API operation from
@@ -16,13 +18,13 @@ public class Client {
         String serverHost = "localhost";
         String serverPort = "8080";
 
-        //to call APIs
-        registerUser(serverHost, serverPort);
-        //claimRoute(serverHost, serverPort);
+        User user = new User("Jacob71929","jacob123","stevenson@asdf.org","Jacob", "Stevenson","m","df5h96");
+        registerUser(serverHost, serverPort, user);
     }
 
-    // The registerUser method calls the server's "/user/register" operation to
-    // register a user in the server in JSON format
+
+    /*
+    //HERE IS THE COMMENTED OUT VERSION OF REGISTER USER
     private static void registerUser(String serverHost, String serverPort) {
 
         // This method shows how to send a POST request to a server
@@ -106,7 +108,39 @@ public class Client {
             e.printStackTrace();
         }
     }
+    */
 
+    private static void registerUser(String serverHost, String serverPort, User user) {
+        try {
+            URL url = new URL("http://" + serverHost + ":" + serverPort + "/user/register");
+            HttpURLConnection http = (HttpURLConnection)url.openConnection();
+            http.setRequestMethod("POST");
+            http.setDoOutput(true);
+            http.addRequestProperty("Accept", "application/json");
+            http.connect();
+
+            Gson gson = new Gson();
+            String reqData = gson.toJson(user);
+            OutputStream reqBody = http.getOutputStream();
+            writeString(reqData, reqBody);
+            reqBody.close();
+
+            if (http.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                InputStream respBody = http.getInputStream();
+                String respData = readString(respBody);
+                System.out.println(respData);
+
+            } else {
+                System.out.println("ERROR: " + http.getResponseMessage());
+                InputStream respBody = http.getErrorStream();
+                String respData = readString(respBody);
+                System.out.println(respData);
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     /*
         The readString method shows how to read a String from an InputStream.

@@ -4,19 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Pretty much ran up and down with Register functionality">
+    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Fixed duplicate usernames and modified further up and down.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Handlers/FileHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Handlers/LoginHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Handlers/RegisterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Handlers/RegisterHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ServerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ServerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Client.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Handlers/RegisterHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Handlers/RegisterHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Services/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/Register.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/DAOs/UserDAOTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DAOs/UserDAOTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ServerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ServerTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,25 +59,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "/home/adam/jacob/jacob_java/FamilyMapServerStudent",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2724138",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/adam/jacob/jacob_java/FamilyMapServerStudent&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2724138&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/Services" />
@@ -104,7 +103,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Client">
+  <component name="RunManager" selected="Application.Server">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client" />
       <module name="FamilyMapServerStudent" />
@@ -436,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678397417644</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Fixed duplicate usernames and modified further up and down.">
+      <created>1678405115339</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1678405115339</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -478,7 +484,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changing git remote" />
     <MESSAGE value="adding test file." />
     <MESSAGE value="Further testing" />
     <MESSAGE value="Finished the javadoc for DAO classes." />
@@ -503,7 +508,8 @@
     <MESSAGE value="Changed the DAOs a little - retested." />
     <MESSAGE value="Server Implementations" />
     <MESSAGE value="Pretty much ran up and down with Register functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Pretty much ran up and down with Register functionality" />
+    <MESSAGE value="Fixed duplicate usernames and modified further up and down." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed duplicate usernames and modified further up and down." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

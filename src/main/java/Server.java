@@ -1,9 +1,10 @@
-import Handlers.RegisterHandler;
+import Handlers.*;
 import com.sun.net.httpserver.*;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.util.logging.FileHandler;
+
+
 
 public class Server {
 
@@ -27,6 +28,17 @@ public class Server {
         System.out.println("Creating contexts");
 
         server.createContext("/user/register", new RegisterHandler());
+        server.createContext("/user/login", new LoginHandler());
+        server.createContext("/fill/<USERNAME>?/<GENERATIONS>?");
+        server.createContext("/load");
+        server.createContext("/person/<PERSONID>?");
+        server.createContext("/person");
+        server.createContext("/event/<EVENTID>?");
+        server.createContext("/event");
+        server.createContext("/", new FileHandler());
+
+
+
         //Default Handler
         //server.createContext("/", (HttpHandler) new FileHandler());
 
