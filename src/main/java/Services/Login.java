@@ -22,7 +22,7 @@ public class Login {
     /**
      * The charset we pull from to make the authtokens.
      */
-    private static final String TOKENCHARS = "0123456789`~!@#$%^&><()-_=+|}]{[AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+    private static final String TOKENCHARS = "0123456789AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
 
     /**
      * Generating our id's & authtokens

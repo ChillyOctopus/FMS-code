@@ -33,6 +33,7 @@ public class UserDAO extends BaseDAO{
         }
 
         if(usernameTaken(user.getUsername())){
+            DB.closeConnection(false);
             throw new DataAccessException("Username already exists in database.");
         }
 

@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Fixed duplicate usernames and modified further up and down.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Handlers/FileHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Handlers/LoginHandler.java" afterDir="false" />
+    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Ran Register Handler some more, fixed client up.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Handlers/RegisterHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Handlers/RegisterHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Handlers/FileHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Handlers/FileHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Services/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Register.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DAOs/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DAOs/UserDAO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Handlers/RegisterHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Handlers/RegisterHandler.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Server.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Services/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Services/Register.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,8 +160,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Client" />
         <item itemvalue="Application.Server" />
+        <item itemvalue="Application.Client" />
         <item itemvalue="JUnit.ServerTest" />
         <item itemvalue="JUnit.UserDAOTest" />
         <item itemvalue="JUnit.EventDAOTest" />
@@ -442,7 +443,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678405115339</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Ran Register Handler some more, fixed client up.">
+      <created>1678471941221</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1678471941221</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -484,7 +492,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adding test file." />
     <MESSAGE value="Further testing" />
     <MESSAGE value="Finished the javadoc for DAO classes." />
     <MESSAGE value="Removed &quot;DB&quot; classes (What were they doin anyway?)" />
@@ -509,7 +516,8 @@
     <MESSAGE value="Server Implementations" />
     <MESSAGE value="Pretty much ran up and down with Register functionality" />
     <MESSAGE value="Fixed duplicate usernames and modified further up and down." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed duplicate usernames and modified further up and down." />
+    <MESSAGE value="Ran Register Handler some more, fixed client up." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ran Register Handler some more, fixed client up." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
