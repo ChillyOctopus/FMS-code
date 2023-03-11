@@ -13,7 +13,7 @@ public class GetAllRequest {
      * Constructor
      * @param authtoken the authtoken in question
      */
-    public GetAllRequest(String authtoken, String eventID) {
+    public GetAllRequest(String authtoken) {
         this.authtoken = authtoken;
     }
 }

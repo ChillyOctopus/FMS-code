@@ -15,6 +15,10 @@ public class FileHandler implements HttpHandler {
             if (exchange.getRequestMethod().equalsIgnoreCase("get")) {
 
                 String urlPath = exchange.getRequestURI().getPath();
+                String[] pathComponents = urlPath.split("/");
+                for(String s : pathComponents){
+                    System.out.println(s);
+                }
                 System.out.println(urlPath);
                 String dir = "web";
                 File f;
