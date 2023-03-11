@@ -217,12 +217,13 @@ public class UserDAO extends BaseDAO{
         String sql = "DELETE FROM User";
         try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
             prepStmt.executeUpdate();
+            DB.closeConnection(true);
+            return;
         } catch (SQLException ex) {
             DB.closeConnection(false);
             System.out.println(ex.getMessage());
             throw new DataAccessException("Couldn't prepare statement or clear user table data.\n");
         }
-        DB.closeConnection(true);
     }
 
 }

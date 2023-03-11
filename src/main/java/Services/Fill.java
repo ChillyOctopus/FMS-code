@@ -24,8 +24,9 @@ public class Fill {
      */
     public FillResponse fill(FillRequest request){
        try {
-           UserDAO udao = new UserDAO();
+
            String name = request.getUsername();
+           UserDAO udao = new UserDAO();
            User u = udao.findByUsername(name);
 
            PersonDAO pdao = new PersonDAO();
@@ -42,8 +43,8 @@ public class Fill {
        }catch (DataAccessException ex){
            return new FillResponse("Error: "+ex.getMessage(),false);
        }
-       return new FillResponse("Successfully added " + "_" + " persons and "+ "_" + " events to the database.", true);
 
+       return new FillResponse("Successfully added " + "_" + " persons and "+ "_" + " events to the database.", true);
     }
 
     /*

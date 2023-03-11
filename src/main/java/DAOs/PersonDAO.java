@@ -109,16 +109,13 @@ public class PersonDAO extends BaseDAO{
                     persons.add(p);
 
                 } while (rs.next());
-            } else {
-                System.out.println("No Persons found.\n");
             }
-
+            DB.closeConnection(false);
+            return persons;
         } catch (SQLException ex){
-            System.out.println(ex.getMessage());
+            DB.closeConnection(false);
             throw new DataAccessException("Either couldn't prepare statement or translate data to objects.");
         }
-
-        return persons;
     }
 
     /**
@@ -132,7 +129,7 @@ public class PersonDAO extends BaseDAO{
             prepStmt.setString(1,personID);
             prepStmt.executeQuery();
             DB.closeConnection(true);
-
+            return;
         } catch (SQLException ex){
             DB.closeConnection(false);
             System.out.println(ex.getMessage());
@@ -148,11 +145,12 @@ public class PersonDAO extends BaseDAO{
         String sql = "DELETE FROM Person";
         try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
             prepStmt.executeUpdate();
+            DB.closeConnection(true);
+            return;
         } catch (SQLException ex) {
             DB.closeConnection(false);
             System.out.println(ex.getMessage());
             throw new DataAccessException("Couldn't prepare statement or clear person table data.\n");
         }
-        DB.closeConnection(true);
     }
 }

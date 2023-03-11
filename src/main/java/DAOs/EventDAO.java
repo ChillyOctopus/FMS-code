@@ -78,11 +78,12 @@ public class EventDAO extends BaseDAO{
         String sql = "DELETE FROM Event";
         try (PreparedStatement stmt = DB.getConnection().prepareStatement(sql)) {
             stmt.executeUpdate();
+            DB.closeConnection(true);
+            return;
         } catch (SQLException ex) {
             ex.printStackTrace();
             DB.closeConnection(false);
             throw new DataAccessException("Error encountered while clearing the event table");
         }
-        DB.closeConnection(true);
     }
 }

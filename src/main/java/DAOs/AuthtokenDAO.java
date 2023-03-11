@@ -131,11 +131,12 @@ public class AuthtokenDAO extends BaseDAO {
         String sql = "DELETE FROM Authtoken";
         try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
             prepStmt.executeUpdate();
+            DB.closeConnection(true);
+            return;
         } catch (SQLException ex) {
             DB.closeConnection(false);
             System.out.println(ex.getMessage());
             throw new DataAccessException("Couldn't prepare statement or clear authtoken table data.\n");
         }
-        DB.closeConnection(true);
     }
 }
