@@ -1,7 +1,18 @@
 package Services;
 
+import DAOs.DataAccessException;
+import Models.Person;
+import Models.Event;
+import Models.User;
+
 import Requests.LoadRequest;
+import Responses.ClearResponse;
 import Responses.LoadResponse;
+import Services.Clear;
+
+import DAOs.PersonDAO;
+import DAOs.UserDAO;
+import DAOs.EventDAO;
 
 /**
  * Implements Load
@@ -13,8 +24,38 @@ public class Load {
      * @return a Load.Resp. object
      */
     public LoadResponse load(LoadRequest request){
-       LoadResponse response = null;
-       return response;
+        boolean success = false;
+        try {
+            Clear wipe = new Clear();
+            ClearResponse cr = wipe.clear();
+            if(!cr.success){
+                return new LoadResponse(cr.getMessage(), cr.isSuccess());
+            }
+
+            UserDAO udao = new UserDAO();
+            for(User u : request.getUsers()){
+                udao.insert(u);
+            }
+
+            PersonDAO pdao = new PersonDAO();
+            for (Person p : request.getPersons()) {
+                pdao.insert(p);
+            }
+
+
+            EventDAO edao = new EventDAO();
+            for(Event e : request.getEvents()){
+                edao.insert(e);
+            }
+
+        }catch (DataAccessException ex){
+            return new LoadResponse(ex.getMessage(),false);
+        }
+
+        return new LoadResponse("Successfully added " +
+                                request.getUsers().length + " users, " +
+                                request.getPersons().length + " persons, and " +
+                                request.getEvents().length + " events to the database.", true);
     }
 
     /*
