@@ -1,7 +1,12 @@
 package Services;
 
+import DAOs.DataAccessException;
+import Models.Authtoken;
+import Models.User;
 import Requests.LoginRequest;
 import Responses.LoginResponse;
+import DAOs.UserDAO;
+import DAOs.AuthtokenDAO;
 
 import java.util.Random;
 
@@ -14,9 +19,26 @@ public class Login {
      * @param request the Log.Req. object
      * @return a Log.Resp. object
      */
-    public LoginResponse login(LoginRequest request){
-        LoginResponse response = null;
-        return response;
+    public LoginResponse login(LoginRequest request) {
+        try {
+
+            UserDAO udao = new UserDAO();
+            String name = request.getUsername();
+            System.out.println("Searching database for: "+name);
+            User u = udao.findByUsername(name);
+            System.out.println("Found user with username: " + u.getUsername());
+            String token = generateUniqueString();
+
+            Authtoken auther = new Authtoken(token,u.getUsername());
+            AuthtokenDAO adao = new AuthtokenDAO();
+            System.out.println("Created authtoken object, passing into adoa.");
+            adao.insert(auther);
+
+            return new LoginResponse(token,u.getUsername(),u.getPersonID(),null,true);
+
+        }catch(DataAccessException ex){
+            return new LoginResponse(ex.getMessage(),false);
+        }
     }
 
     /**

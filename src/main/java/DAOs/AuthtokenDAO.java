@@ -19,19 +19,17 @@ public class AuthtokenDAO extends BaseDAO {
      */
     public void insert(Authtoken token) throws DataAccessException{
         String sql = "INSERT INTO Authtoken (authtoken, username) VALUES (?,?)";
-        System.out.println(token.getAuthtoken());
-        System.out.println(token.getUsername());
 
         try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
             prepStmt.setString(1,token.getAuthtoken());
             prepStmt.setString(2,token.getUsername());
-            System.out.println(prepStmt.toString());
             prepStmt.executeUpdate();
         }catch(SQLException ex){
             ex.getMessage();
             DB.closeConnection(false);
             throw new DataAccessException("Unable to insert Authtoken.");
         }
+
         DB.closeConnection(true);
     }
 
@@ -64,14 +62,15 @@ public class AuthtokenDAO extends BaseDAO {
      * @param username the username we are searching for an authtoken for
      * @return the list of authtokens (likely just one) that matches the username
      */
-    public List<String> findAuths(String username) throws DataAccessException{
-        List<String> authList = new ArrayList<>();
+    public List<Authtoken> findAuths(String username) throws DataAccessException{
+        List<Authtoken> authList = new ArrayList<>();
         String sql = "SELECT * FROM Authtoken WHERE username = ?";
         try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
             prepStmt.setString(1,username);
             ResultSet rs = prepStmt.executeQuery();
             while(rs.next()){
-                authList.add(rs.getString(1));
+                Authtoken a = new Authtoken(rs.getString(1),rs.getString(2));
+                authList.add(a);
             }
         } catch(SQLException ex){
             ex.getMessage();
@@ -103,6 +102,25 @@ public class AuthtokenDAO extends BaseDAO {
 
         DB.closeConnection(false);
         return authList;
+    }
+
+    /**
+     * Delete a single authtoken given ID
+     * @param token the token we are searching for.
+     * @throws DataAccessException
+     */
+    public void delete(String token) throws DataAccessException{
+        String sql = "DELETE FROM Authtoken WHERE authtoken = ?";
+        try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
+            prepStmt.setString(1,token);
+            prepStmt.executeQuery();
+            DB.closeConnection(true);
+
+        } catch (SQLException ex){
+            DB.closeConnection(false);
+            System.out.println(ex.getMessage());
+            throw new DataAccessException("Couldn't prepare statement or execute delete.");
+        }
     }
 
     /**

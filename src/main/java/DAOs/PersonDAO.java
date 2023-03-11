@@ -134,6 +134,7 @@ public class PersonDAO extends BaseDAO{
             DB.closeConnection(true);
 
         } catch (SQLException ex){
+            DB.closeConnection(false);
             System.out.println(ex.getMessage());
             throw new DataAccessException("Couldn't prepare statement or execute delete.");
         }

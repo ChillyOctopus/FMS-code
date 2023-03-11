@@ -3,9 +3,6 @@ package DAOs;
 import Models.User;
 import org.junit.jupiter.api.*;
 
-import javax.xml.crypto.Data;
-
-import java.util.LinkedHashMap;
 import java.util.LinkedList;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -35,12 +32,12 @@ public class UserDAOTest {
     @Test
     public void insertPass() throws DataAccessException{
         uDao.insert(happyUser);
-        User u = uDao.find(happyUser.getPersonID());
+        User u = uDao.findByID(happyUser.getPersonID());
         assertNotNull(u);
         assertEquals(happyUser, u);
 
         uDao.insert(sadUser);
-        u = uDao.find((sadUser.getPersonID()));
+        u = uDao.findByID((sadUser.getPersonID()));
         assertNotNull(u);
         assertEquals(sadUser, u);
     }
@@ -56,19 +53,19 @@ public class UserDAOTest {
     @Test
     public void findPass() throws DataAccessException{
         uDao.insert(happyUser);
-        User u = uDao.find(happyUser.getPersonID());
+        User u = uDao.findByID(happyUser.getPersonID());
         assertEquals(happyUser, u);
     }
 
     @Test
     public void findFail() throws DataAccessException{
-        assertThrows(DataAccessException.class, ()->uDao.find(happyUser.getPersonID()));
+        assertThrows(DataAccessException.class, ()->uDao.findByID(happyUser.getPersonID()));
         uDao.insert(sadUser);
-        assertThrows(DataAccessException.class, ()->uDao.find(happyUser.getPersonID()));
-        assertThrows(DataAccessException.class, ()->uDao.find("randomString"));
+        assertThrows(DataAccessException.class, ()->uDao.findByID(happyUser.getPersonID()));
+        assertThrows(DataAccessException.class, ()->uDao.findByID("randomString"));
         sadUser.setPersonID(null);
-        assertThrows(DataAccessException.class, ()->uDao.find(sadUser.getPersonID()));
-        assertThrows(DataAccessException.class, ()->uDao.find(null));
+        assertThrows(DataAccessException.class, ()->uDao.findByID(sadUser.getPersonID()));
+        assertThrows(DataAccessException.class, ()->uDao.findByID(null));
     }
 
     @Test

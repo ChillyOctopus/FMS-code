@@ -31,6 +31,10 @@ public class LoginResponse extends BaseResponse{
         this.personID = personID;
     }
 
+    public LoginResponse(String message, boolean success){
+        super(message,success);
+    }
+
     public String getAuthtoken() {
         return authtoken;
     }

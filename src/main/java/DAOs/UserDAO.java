@@ -62,7 +62,7 @@ public class UserDAO extends BaseDAO{
      * @return the User object from the database.
      * @throws DataAccessException
      */
-    public User find(String ID) throws DataAccessException{
+    public User findByID(String ID) throws DataAccessException{
         String sql = "SELECT * FROM User WHERE personID = ?";
         try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
             prepStmt.setString(1,ID);
@@ -91,6 +91,43 @@ public class UserDAO extends BaseDAO{
     }
 
     /**
+     * Returns a single user based on username.
+     * @param username the username we are searching for.
+     * @return the User object from the database.
+     * @throws DataAccessException
+     */
+    public User findByUsername(String username) throws DataAccessException{
+        String sql = "SELECT * FROM User WHERE username = ?";
+        try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
+            System.out.println("Prepared statement.");
+            prepStmt.setString(1,username);
+            System.out.println("Statement="+prepStmt);
+            ResultSet rs = prepStmt.executeQuery();
+            System.out.println("Have result set.");
+            if(rs.next()){
+                User u = new User(
+                        rs.getString("username"),
+                        rs.getString("password"),
+                        rs.getString("email"),
+                        rs.getString("firstName"),
+                        rs.getString("lastName"),
+                        rs.getString("gender"),
+                        rs.getString("personID"));
+                DB.closeConnection(false);
+                return u;
+            } else {
+                DB.closeConnection(false);
+                throw new DataAccessException("Found no user with matching username.");
+            }
+
+        } catch(SQLException ex){
+            System.out.println(ex.getMessage());
+            DB.closeConnection(false);
+            throw new DataAccessException("Couldn't translate result set to user object\n");
+        }
+    }
+
+    /**
      * Determines whether username is taken already
      * @param username the username we are checking.
      * @return a boolean whether it is taken.
@@ -108,6 +145,7 @@ public class UserDAO extends BaseDAO{
             }
         } catch(SQLException ex){
             System.out.println(ex.getMessage());
+            DB.closeConnection(false);
             throw new DataAccessException("Error using SQL to find user by username. (UserDAO)\n");
         }
     }
