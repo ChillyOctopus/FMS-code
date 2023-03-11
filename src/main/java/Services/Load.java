@@ -8,7 +8,6 @@ import Models.User;
 import Requests.LoadRequest;
 import Responses.ClearResponse;
 import Responses.LoadResponse;
-import Services.Clear;
 
 import DAOs.PersonDAO;
 import DAOs.UserDAO;
