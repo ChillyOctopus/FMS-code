@@ -10,7 +10,7 @@ public class DataPot {
     static private DataPot instance;
     private LocationData locations;
     private FNameData femaleNames;
-    private MNamedata maleNames;
+    private MNameData maleNames;
     private SNameData surNames;
 
     static public DataPot getInstance(){
@@ -31,7 +31,7 @@ public class DataPot {
             this.femaleNames = gson.fromJson(reader,FNameData.class);
             reader.close();
             reader = new FileReader(dir+"mnames.txt");
-            this.maleNames = gson.fromJson(reader,MNamedata.class);
+            this.maleNames = gson.fromJson(reader, MNameData.class);
             reader.close();
             reader = new FileReader(dir+"snames.txt");
             this.surNames = gson.fromJson(reader,SNameData.class);
@@ -54,7 +54,7 @@ public class DataPot {
     }
 
 
-    public MNamedata getMaleNames() {
+    public MNameData getMaleNames() {
         return maleNames;
     }
 

@@ -1,9 +1,9 @@
 package GeneratingGenerations;
 
-public class MNamedata {
+public class MNameData {
     private String[] mnames;
 
-    public MNamedata(String[] mnames) {
+    public MNameData(String[] mnames) {
         this.mnames = mnames;
     }
 
