@@ -39,7 +39,6 @@ public class Event {
      * The year the event occurred.
      */
     private Integer year;
-
     /**
      * Constructor
      * @param eventID the eventID

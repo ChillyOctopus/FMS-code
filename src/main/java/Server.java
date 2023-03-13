@@ -1,3 +1,4 @@
+import GeneratingGenerations.DataPot;
 import Handlers.*;
 import com.sun.net.httpserver.*;
 
@@ -5,16 +6,15 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.util.Random;
 
-import static java.util.Random.*;
 
 public class Server {
 
     private static final int MAX_CONNECTIONS = 12;
     private HttpServer server;
-
     private void run(String portNumber) throws IOException {
         System.out.println("Initializing HTTP Server on port "+portNumber);
         try {
+            Random random = new Random();
             server = HttpServer.create(
                     new InetSocketAddress(Integer.parseInt(portNumber)),
                     MAX_CONNECTIONS);
@@ -46,12 +46,10 @@ public class Server {
 
     public static void main(String[] args) {
         //String portNumber = args[0];
-        Random random = new Random();
-        int portCreate =  random.nextInt(50000);
-        portCreate+=10000;
-        String portNumber = String.valueOf(portCreate);
+        String portNumber = String.valueOf(8080);
         try{
             new Server().run(portNumber);
+            DataPot.getInstance();
 
         }catch(IOException ex){
             System.out.println(ex.getMessage());

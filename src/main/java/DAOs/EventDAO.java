@@ -56,20 +56,21 @@ public class EventDAO extends BaseDAO{
             prepStmt.setString(1,eventID);
             ResultSet rs = prepStmt.executeQuery();
             if (rs.next()) {
-                event = new Event(rs.getString("eventID"), rs.getString("associatedUsername"),
+                Event e = new Event(rs.getString("eventID"), rs.getString("associatedUsername"),
                         rs.getString("personID"), rs.getFloat("latitude"), rs.getFloat("longitude"),
                         rs.getString("country"), rs.getString("city"), rs.getString("eventType"),
                         rs.getInt("year"));
                 DB.closeConnection(false);
-                return event;
+                return e;
             } else {
                 DB.closeConnection(false);
-                return null;
+                throw new DataAccessException("Found no Event with matching ID.");
+
             }
         } catch (SQLException ex){
             System.out.println(ex.getMessage());
             DB.closeConnection(false);
-            throw new DataAccessException("Couldn't locate single event.");
+            throw new DataAccessException("Couldn't locate the single event - issue in SQL.");
         }
     }
 

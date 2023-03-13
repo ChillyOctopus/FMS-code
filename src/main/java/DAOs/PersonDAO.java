@@ -60,7 +60,7 @@ public class PersonDAO extends BaseDAO{
             prepStmt.setString(1, ID);
             ResultSet rs = prepStmt.executeQuery();
             if(rs.next()){
-                return new Person(
+                Person p = new Person(
                         rs.getString("personID"),
                         rs.getString("associatedUsername"),
                         rs.getString("firstName"),
@@ -69,12 +69,15 @@ public class PersonDAO extends BaseDAO{
                         rs.getString("fatherID"),
                         rs.getString("motherID"),
                         rs.getString("spouseID"));
+                DB.closeConnection(false);
+                return p;
             } else {
-                //System.out.println("Result set was empty\n");
+                DB.closeConnection(false);
                 throw new DataAccessException("Found no Person with matching ID.");
             }
 
         } catch(SQLException ex){
+            DB.closeConnection(false);
             System.out.println(ex.getMessage());
             throw new DataAccessException("Couldn't translate result set to person object\n");
         }

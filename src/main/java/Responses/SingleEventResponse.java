@@ -15,11 +15,11 @@ public class SingleEventResponse extends BaseResponse{
     /**
      * the latitude to return
      */
-    public float latitude;
+    public Float latitude;
     /**
      * the longitude to return
      */
-    public float longitude;
+    public Float longitude;
     /**
      * the country to return
      */
@@ -100,7 +100,7 @@ public class SingleEventResponse extends BaseResponse{
     /**
      * the year to return
      */
-    public int year;
+    public Integer year;
 
     /**
      * Constructor

@@ -9,24 +9,24 @@ public class AllEventResponse extends BaseResponse{
     /**
      * array of Event objects to return
      */
-    public Event[] eventdata;
+    public Event[] data;
 
-    public Event[] getEventdata() {
-        return eventdata;
+    public Event[] getData() {
+        return data;
     }
 
-    public void setEventdata(Event[] eventdata) {
-        this.eventdata = eventdata;
+    public void setData(Event[] data) {
+        this.data = data;
     }
 
     /**
      * Constructor
-     * @param eventdata the data we are passing on
+     * @param data the data we are passing on
      * @param message the message we are sending
      * @param success the state of the request
      */
-    public AllEventResponse(Event[] eventdata, String message, boolean success){
+    public AllEventResponse(Event[] data, String message, boolean success){
         super(message,success);
-        this.eventdata = eventdata;
+        this.data = data;
     }
 }
