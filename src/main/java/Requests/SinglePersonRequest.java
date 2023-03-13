@@ -4,6 +4,22 @@ package Requests;
  * Request body for a single Person.
  */
 public class SinglePersonRequest {
+    public String getAuthtoken() {
+        return authtoken;
+    }
+
+    public void setAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+    }
+
+    public String getPersonID() {
+        return personID;
+    }
+
+    public void setPersonID(String personID) {
+        this.personID = personID;
+    }
+
     /**
      * the authtoken
      */

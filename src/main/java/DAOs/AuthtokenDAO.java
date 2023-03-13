@@ -37,15 +37,17 @@ public class AuthtokenDAO extends BaseDAO {
      * Checks to see if we have the token in the database.
      * @param tokenString The Authtokens string we are checking for in database.
      * @return the ID of the User who has the token.
+     * @throws DataAccessException
      */
-    public String findUser(String tokenString) throws DataAccessException{
+    public String findUsername(String tokenString) throws DataAccessException{
         String sql = "SELECT * FROM Authtoken WHERE authtoken = ?";
         try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
             prepStmt.setString(1,tokenString);
             ResultSet rs = prepStmt.executeQuery();
             if(rs.next()){
+                String username = rs.getString(2);
                 DB.closeConnection(false);
-                return rs.getString(1);
+                return username;
             } else {
                 DB.closeConnection(false);
                 return null;
@@ -68,8 +70,9 @@ public class AuthtokenDAO extends BaseDAO {
             prepStmt.setString(1,tokenString);
             ResultSet rs = prepStmt.executeQuery();
             if(rs.next()){
+                String token = rs.getString(1);
                 DB.closeConnection(false);
-                return rs.getString(2);
+                return token;
             } else {
                 DB.closeConnection(false);
                 return null;

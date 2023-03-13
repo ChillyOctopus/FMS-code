@@ -22,24 +22,33 @@ public class PersonHandler implements HttpHandler {
         boolean success = false;
         try{
             if(exchange.getRequestMethod().equalsIgnoreCase("get")){
+                System.out.println("Request method = get");
                 Headers headers = exchange.getRequestHeaders();
-                if(headers.containsKey("Authtoken")){
-
+                if(headers.containsKey("Authorization")){
+                    System.out.println("Headers have key Authorization.");
                     String path = exchange.getRequestURI().getPath();
                     String[] pathComponents = path.split("/");
+                    for(String s : pathComponents){
+                        System.out.println(s);
+                    }
                     if(pathComponents.length > 1 && pathComponents.length < 4){
-
-                        String token = headers.getFirst("Authtoken");
+                        System.out.println("Components between 1 and 4.");
+                        String token = headers.getFirst("Authorization");
+                        System.out.println("Token: "+token);
                         String responseBody;
                         Gson gson = new Gson();
 
                         if(pathComponents.length == 2){
+                            System.out.println("2 Components");
                             //Return a list of all persons related to user related to token
                             GetAllRequest request = new GetAllRequest(token);
                             GetAllPersons service = new GetAllPersons();
+                            System.out.println("Created req and ser objects, about to enter implementation.");
                             AllPersonResponse response = service.findAll(request);
+                            System.out.println("Worked?: "+response.success);
                             responseBody = gson.toJson(response);
                         }else{
+                            System.out.println("3 Components");
                             //Return the single person who is related to user related to token based on ID
                             SinglePersonRequest request = new SinglePersonRequest(token,pathComponents[2]);
                             SinglePerson service = new SinglePerson();

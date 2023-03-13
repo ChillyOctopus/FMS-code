@@ -79,7 +79,7 @@ class ClaimRouteHandler implements HttpHandler {
                         // Display/log the request JSON data
                         System.out.println(reqData);
 
-                        // TODO: Claim a route based on the request data
+                        //Claim a route based on the request data
 
 						/*
 						LoginRequest request = (LoginRequest)gson.fromJson(reqData, LoginRequest.class);

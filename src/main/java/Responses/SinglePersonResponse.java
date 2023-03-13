@@ -37,32 +37,28 @@ public class SinglePersonResponse extends BaseResponse{
      */
     public String spouseID;
 
-    public void setFatherID(String fatherID) {
-        this.fatherID = fatherID;
-    }
-
-    public void setMotherID(String motherID) {
-        this.motherID = motherID;
-    }
-
-    public void setSpouseID(String spouseID) {
-        this.spouseID = spouseID;
-    }
-
     /**
      * Constructor
-     * @param associatedUsername the username who is a descendant of person
-     * @param personID the persons id
-     * @param firstName their first name
-     * @param lastName their last name
-     * @param gender their gender
+     * @param message the message
+     * @param success state of request
+     * @param associatedUsername the user whom this person "belongs to"
+     * @param personID this persons ID
+     * @param firstName this persons first name
+     * @param lastName this persons last name
+     * @param gender this persons gender
+     * @param fatherID this persons fathers ID
+     * @param motherID this persons mothers ID
+     * @param spouseID this persons spouses ID
      */
-    public SinglePersonResponse(String associatedUsername, String personID, String firstName, String lastName, String gender,String message, boolean success) {
-        super(message,success);
+    public SinglePersonResponse(String message, boolean success, String associatedUsername, String personID, String firstName, String lastName, String gender, String fatherID, String motherID, String spouseID) {
+        super(message, success);
         this.associatedUsername = associatedUsername;
         this.personID = personID;
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
+        this.fatherID = fatherID;
+        this.motherID = motherID;
+        this.spouseID = spouseID;
     }
 }

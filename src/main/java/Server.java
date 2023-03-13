@@ -3,8 +3,9 @@ import com.sun.net.httpserver.*;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.util.Random;
 
-
+import static java.util.Random.*;
 
 public class Server {
 
@@ -12,7 +13,7 @@ public class Server {
     private HttpServer server;
 
     private void run(String portNumber) throws IOException {
-        System.out.println("Initializing HTTP Server");
+        System.out.println("Initializing HTTP Server on port "+portNumber);
         try {
             server = HttpServer.create(
                     new InetSocketAddress(Integer.parseInt(portNumber)),
@@ -33,13 +34,9 @@ public class Server {
         server.createContext("/fill", new FillHandler());
         server.createContext("/load", new LoadHandler());
         server.createContext("/person", new PersonHandler());
-        server.createContext("/event");
+        server.createContext("/event", new EventHandler());
         server.createContext("/", new FileHandler());
 
-
-
-        //Default Handler
-        //server.createContext("/", (HttpHandler) new FileHandler());
 
         System.out.println("Starting server");
         server.start();
@@ -49,7 +46,10 @@ public class Server {
 
     public static void main(String[] args) {
         //String portNumber = args[0];
-        String portNumber = "8080";
+        Random random = new Random();
+        int portCreate =  random.nextInt(50000);
+        portCreate+=10000;
+        String portNumber = String.valueOf(portCreate);
         try{
             new Server().run(portNumber);
 
