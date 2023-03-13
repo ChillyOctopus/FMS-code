@@ -1,11 +1,12 @@
 package Handlers;
 
 import Requests.GetAllRequest;
-import Requests.SinglePersonRequest;
-import Responses.AllPersonResponse;
-import Responses.SinglePersonResponse;
-import Services.GetAllPersons;
-import Services.SinglePerson;
+import Requests.SingleEventRequest;
+import Services.GetAllEvents;
+import Services.SingleEvent;
+import Responses.AllEventResponse;
+import Responses.SingleEventResponse;
+
 import com.google.gson.Gson;
 import com.sun.net.httpserver.Headers;
 import com.sun.net.httpserver.HttpExchange;
@@ -16,7 +17,7 @@ import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 
-public class PersonHandler implements HttpHandler {
+public class EventHandler implements HttpHandler {
     @Override
     public void handle(HttpExchange exchange) throws IOException {
         boolean success = false;
@@ -41,17 +42,17 @@ public class PersonHandler implements HttpHandler {
                             System.out.println("2 Components");
                             //Return a list of all persons related to user related to token
                             GetAllRequest request = new GetAllRequest(token);
-                            GetAllPersons service = new GetAllPersons();
+                            GetAllEvents service = new GetAllEvents();
                             System.out.println("Created req and ser objects, about to enter implementation.");
-                            AllPersonResponse response = service.findAll(request);
+                            AllEventResponse response = service.findAll(request);
                             System.out.println("Worked?: "+response.success);
                             responseBody = gson.toJson(response);
                         }else{
                             System.out.println("3 Components");
-                            //Return the single person who is related to user related to token based on ID
-                            SinglePersonRequest request = new SinglePersonRequest(token,pathComponents[2]);
-                            SinglePerson service = new SinglePerson();
-                            SinglePersonResponse response = service.find(request);
+                            //Return the single event who is related to user related to token based on ID
+                            SingleEventRequest request = new SingleEventRequest(token,pathComponents[2]);
+                            SingleEvent service = new SingleEvent();
+                            SingleEventResponse response = service.find(request);
                             responseBody = gson.toJson(response);
                         }
 
@@ -87,6 +88,5 @@ public class PersonHandler implements HttpHandler {
         sw.write(str);
         sw.flush();
     }
-
 
 }

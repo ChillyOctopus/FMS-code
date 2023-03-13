@@ -1,12 +1,8 @@
 package Services;
 
 import DAOs.*;
-import Models.Authtoken;
 import Models.Person;
 import Responses.ClearResponse;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Implements clear

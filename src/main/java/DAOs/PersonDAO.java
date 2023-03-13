@@ -1,13 +1,12 @@
 package DAOs;
 import Models.Person;
-import Models.User;
 import org.jetbrains.annotations.NotNull;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedList;
-import java.util.List;
+
 /**
  * In-between for Person models and database.
  */

@@ -3,12 +3,10 @@ package Services;
 import DAOs.DataAccessException;
 import Models.Person;
 import Models.User;
-import Models.Authtoken;
 import Requests.FillRequest;
 import Responses.FillResponse;
 import DAOs.UserDAO;
 import DAOs.PersonDAO;
-import DAOs.AuthtokenDAO;
 
 import java.util.List;
 

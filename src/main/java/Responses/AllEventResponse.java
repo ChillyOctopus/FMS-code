@@ -11,6 +11,14 @@ public class AllEventResponse extends BaseResponse{
      */
     public Event[] eventdata;
 
+    public Event[] getEventdata() {
+        return eventdata;
+    }
+
+    public void setEventdata(Event[] eventdata) {
+        this.eventdata = eventdata;
+    }
+
     /**
      * Constructor
      * @param eventdata the data we are passing on

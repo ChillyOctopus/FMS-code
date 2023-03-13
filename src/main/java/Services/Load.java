@@ -1,8 +1,8 @@
 package Services;
 
 import DAOs.DataAccessException;
-import Models.Person;
 import Models.Event;
+import Models.Person;
 import Models.User;
 
 import Requests.LoadRequest;

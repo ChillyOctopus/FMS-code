@@ -4,17 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Did half of both person requests up and down.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/AuthtokenDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/AuthtokenDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ExampleCode/ClaimRouteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ExampleCode/ClaimRouteHandler.java" afterDir="false" />
+    <list default="true" id="18e7faf9-a952-4c6f-9a57-f01e17a930f9" name="Changes" comment="Did pretty much all of person handlers, did some security protocols as well as a defense against Dad's meddling. Terrifying. It's going well though, I'm sending in reconnaissance now. I have experienced operatives who overthrow governments, Dad's PHP program should be a snap. He is darn lucky I don't know PHP, I already have had access to his program hehe.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Handlers/EventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/EventDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/EventDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DAOs/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DAOs/PersonDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Handlers/PersonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Handlers/PersonHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Requests/GetAllRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Requests/GetAllRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Requests/SinglePersonRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Requests/SinglePersonRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/SinglePersonResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/SinglePersonResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/GetAllPersons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/GetAllPersons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Services/SinglePerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/SinglePerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Requests/LoadRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Requests/LoadRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Requests/SingleEventRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Requests/SingleEventRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/AllEventResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/AllEventResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Responses/SingleEventResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Responses/SingleEventResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Clear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Clear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Fill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Fill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/GetAllEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/GetAllEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/Load.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/Load.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Services/SingleEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Services/SingleEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DAOs/PersonDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DAOs/PersonDAOTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,20 +178,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676493587413</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Modifying classes, added table statements.">
-      <created>1678212963388</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1678212963388</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Changing git remote">
-      <created>1678213586542</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1678213586542</updated>
     </task>
     <task id="LOCAL-00006" summary="adding test file.">
       <created>1678213811176</created>
@@ -518,7 +508,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678573389139</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Did pretty much all of person handlers, did some security protocols as well as a defense against Dad's meddling. Terrifying. It's going well though, I'm sending in reconnaissance now. I have experienced operatives who overthrow governments, Dad's PHP program should be a snap. He is darn lucky I don't know PHP, I already have had access to his program hehe.">
+      <created>1678737199156</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1678737199157</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Did pretty much all of person handlers, did some security protocols as well as a defense against Dad's meddling. Terrifying. It's going well though, I'm sending in reconnaissance now. I have experienced operatives who overthrow governments, Dad's PHP program should be a snap. He is darn lucky I don't know PHP, I already have had access to his program hehe.">
+      <created>1678737207060</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1678737207061</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -560,7 +564,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Double checked javadoc." />
     <MESSAGE value="Final Commit/Push for the day." />
     <MESSAGE value="Modified the responses to have a &quot;base response&quot;" />
     <MESSAGE value="Modified table statements, and UserDAO implementations." />
@@ -585,7 +588,8 @@
     <MESSAGE value="Did nearly all of the Load class." />
     <MESSAGE value="Did nearly all of the Load classes." />
     <MESSAGE value="Did half of both person requests up and down." />
-    <option name="LAST_COMMIT_MESSAGE" value="Did half of both person requests up and down." />
+    <MESSAGE value="Did pretty much all of person handlers, did some security protocols as well as a defense against Dad's meddling. Terrifying. It's going well though, I'm sending in reconnaissance now. I have experienced operatives who overthrow governments, Dad's PHP program should be a snap. He is darn lucky I don't know PHP, I already have had access to his program hehe." />
+    <option name="LAST_COMMIT_MESSAGE" value="Did pretty much all of person handlers, did some security protocols as well as a defense against Dad's meddling. Terrifying. It's going well though, I'm sending in reconnaissance now. I have experienced operatives who overthrow governments, Dad's PHP program should be a snap. He is darn lucky I don't know PHP, I already have had access to his program hehe." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

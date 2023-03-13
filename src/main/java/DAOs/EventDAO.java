@@ -1,7 +1,10 @@
 package DAOs;
 
 import java.sql.*;
+import java.util.LinkedList;
+
 import Models.Event;
+
 /**
  * In-between for Event models and database.
  */
@@ -67,6 +70,44 @@ public class EventDAO extends BaseDAO{
             System.out.println(ex.getMessage());
             DB.closeConnection(false);
             throw new DataAccessException("Couldn't locate single event.");
+        }
+    }
+
+    /**
+     * Returns all events we have in the database
+     * @param assocUserID the UserID we want to screen the events through
+     * @return A list of events in the database
+     * @throws DataAccessException
+     */
+    public LinkedList<Event> findAll(String assocUserID) throws DataAccessException{
+        LinkedList<Event> events = new LinkedList<>();
+        String sql = "SELECT * FROM Event WHERE associatedUsername = ?";
+
+        try(PreparedStatement prepStmt = DB.getConnection().prepareStatement(sql)){
+            prepStmt.setString(1,assocUserID);
+            ResultSet rs = prepStmt.executeQuery();
+            if(rs.next()) {
+                do {
+                    Event e = new Event(
+                            rs.getString(1),
+                            rs.getString(2),
+                            rs.getString(3),
+                            rs.getFloat(4),
+                            rs.getFloat(5),
+                            rs.getString(6),
+                            rs.getString(7),
+                            rs.getString(8),
+                            rs.getInt(9));
+
+                    events.add(e);
+
+                } while (rs.next());
+            }
+            DB.closeConnection(false);
+            return events;
+        } catch (SQLException ex){
+            DB.closeConnection(false);
+            throw new DataAccessException("Either couldn't prepare statement or translate data to objects.");
         }
     }
 

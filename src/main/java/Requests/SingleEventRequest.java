@@ -22,4 +22,20 @@ public class SingleEventRequest {
         this.authtoken = authtoken;
         this.eventID = eventID;
     }
+
+    public String getAuthtoken() {
+        return authtoken;
+    }
+
+    public void setAuthtoken(String authtoken) {
+        this.authtoken = authtoken;
+    }
+
+    public String getEventID() {
+        return eventID;
+    }
+
+    public void setEventID(String eventID) {
+        this.eventID = eventID;
+    }
 }
